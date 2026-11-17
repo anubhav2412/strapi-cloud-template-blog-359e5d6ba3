@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_pros_ctas",
+  "info": {
+    "displayName": "Apply button",
+    "icon": "cursor",
+    "description": "An Apply button and the campaign its link carries"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "campaign": {
+      "type": "enumeration",
+      "enum": [
+        "header",
+        "home-hero",
+        "home-closing",
+        "how-it-works-closing",
+        "faq-closing",
+        "login",
+        "trainers-hero",
+        "trainers-closing",
+        "dietitians-hero",
+        "dietitians-closing",
+        "nutritionists-hero",
+        "nutritionists-closing",
+        "blog-coming-soon"
+      ],
+      "required": true
+    }
+  }
+}

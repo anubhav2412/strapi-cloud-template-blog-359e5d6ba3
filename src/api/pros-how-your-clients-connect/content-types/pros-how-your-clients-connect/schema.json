@@ -1,0 +1,74 @@
+{
+  "kind": "singleType",
+  "collectionName": "pros_how_your_clients_connects",
+  "info": {
+    "singularName": "pros-how-your-clients-connect",
+    "pluralName": "pros-how-your-clients-connects",
+    "displayName": "Pros — How your clients connect",
+    "description": "Caltrac for Professionals: the page professionals send to their clients"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.seo",
+      "required": true
+    },
+    "intro": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "connect": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "before": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "canSee": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "cannot": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "stopping": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.step-list",
+      "required": true
+    },
+    "faq": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.faq-list",
+      "required": true
+    },
+    "installHeading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

@@ -607,6 +607,567 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiProsBlogLandingProsBlogLanding
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pros_blog_landings';
+  info: {
+    description: 'Caltrac for Professionals: the blog page before the blog launches';
+    displayName: 'Pros \u2014 Blog landing';
+    pluralName: 'pros-blog-landings';
+    singularName: 'pros-blog-landing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    apply: Schema.Attribute.Component<'pros.cta', false> &
+      Schema.Attribute.Required;
+    comingSoonLine: Schema.Attribute.Text & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-blog-landing.pros-blog-landing'
+    > &
+      Schema.Attribute.Private;
+    mascot: Schema.Attribute.Component<'pros.image', false> &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProsFaqProsFaq extends Struct.SingleTypeSchema {
+  collectionName: 'pros_faqs';
+  info: {
+    description: 'Caltrac for Professionals: the FAQ page';
+    displayName: 'Pros \u2014 FAQ';
+    pluralName: 'pros-faqs';
+    singularName: 'pros-faq';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    closingCampaign: Schema.Attribute.Enumeration<
+      [
+        'header',
+        'home-hero',
+        'home-closing',
+        'how-it-works-closing',
+        'faq-closing',
+        'login',
+        'trainers-hero',
+        'trainers-closing',
+        'dietitians-hero',
+        'dietitians-closing',
+        'nutritionists-hero',
+        'nutritionists-closing',
+        'blog-coming-soon',
+      ]
+    > &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-faq.pros-faq'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sections: Schema.Attribute.Component<'pros.faq-list', true> &
+      Schema.Attribute.Required;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProsForDietitiansProsForDietitians
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pros_for_dietitians_pages';
+  info: {
+    description: 'Caltrac for Professionals: the page for dietitians';
+    displayName: 'Pros \u2014 For dietitians';
+    pluralName: 'pros-for-dietitians-pages';
+    singularName: 'pros-for-dietitians';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    closingCampaign: Schema.Attribute.Enumeration<
+      [
+        'header',
+        'home-hero',
+        'home-closing',
+        'how-it-works-closing',
+        'faq-closing',
+        'login',
+        'trainers-hero',
+        'trainers-closing',
+        'dietitians-hero',
+        'dietitians-closing',
+        'nutritionists-hero',
+        'nutritionists-closing',
+        'blog-coming-soon',
+      ]
+    > &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    estimates: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    estimatesScreenshot: Schema.Attribute.Component<'pros.image', false> &
+      Schema.Attribute.Required;
+    faq: Schema.Attribute.Component<'pros.faq-list', false> &
+      Schema.Attribute.Required;
+    fits: Schema.Attribute.Component<'pros.feature-list', false> &
+      Schema.Attribute.Required;
+    hero: Schema.Attribute.Component<'pros.hero', false> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-for-dietitians.pros-for-dietitians'
+    > &
+      Schema.Attribute.Private;
+    privacy: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    review: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProsForNutritionistsProsForNutritionists
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pros_for_nutritionists_pages';
+  info: {
+    description: 'Caltrac for Professionals: the page for nutritionists';
+    displayName: 'Pros \u2014 For nutritionists';
+    pluralName: 'pros-for-nutritionists-pages';
+    singularName: 'pros-for-nutritionists';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    closingCampaign: Schema.Attribute.Enumeration<
+      [
+        'header',
+        'home-hero',
+        'home-closing',
+        'how-it-works-closing',
+        'faq-closing',
+        'login',
+        'trainers-hero',
+        'trainers-closing',
+        'dietitians-hero',
+        'dietitians-closing',
+        'nutritionists-hero',
+        'nutritionists-closing',
+        'blog-coming-soon',
+      ]
+    > &
+      Schema.Attribute.Required;
+    conversations: Schema.Attribute.Component<'pros.section', true> &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'pros.faq-list', false> &
+      Schema.Attribute.Required;
+    hero: Schema.Attribute.Component<'pros.hero', false> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-for-nutritionists.pros-for-nutritionists'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    savesTime: Schema.Attribute.Component<'pros.feature-list', false> &
+      Schema.Attribute.Required;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProsForPersonalTrainersProsForPersonalTrainers
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pros_for_personal_trainers_pages';
+  info: {
+    description: 'Caltrac for Professionals: the page for personal trainers';
+    displayName: 'Pros \u2014 For personal trainers';
+    pluralName: 'pros-for-personal-trainers-pages';
+    singularName: 'pros-for-personal-trainers';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    benefits: Schema.Attribute.Component<'pros.feature-list', false> &
+      Schema.Attribute.Required;
+    closingCampaign: Schema.Attribute.Enumeration<
+      [
+        'header',
+        'home-hero',
+        'home-closing',
+        'how-it-works-closing',
+        'faq-closing',
+        'login',
+        'trainers-hero',
+        'trainers-closing',
+        'dietitians-hero',
+        'dietitians-closing',
+        'nutritionists-hero',
+        'nutritionists-closing',
+        'blog-coming-soon',
+      ]
+    > &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'pros.faq-list', false> &
+      Schema.Attribute.Required;
+    getClients: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    hero: Schema.Attribute.Component<'pros.hero', false> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-for-personal-trainers.pros-for-personal-trainers'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    week: Schema.Attribute.Component<'pros.step-list', false> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ApiProsHomeProsHome extends Struct.SingleTypeSchema {
+  collectionName: 'pros_homes';
+  info: {
+    description: 'Caltrac for Professionals: the home page';
+    displayName: 'Pros \u2014 Home';
+    pluralName: 'pros-homes';
+    singularName: 'pros-home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    allQuestionsLink: Schema.Attribute.Component<'pros.link', false> &
+      Schema.Attribute.Required;
+    applyPage: Schema.Attribute.RichText & Schema.Attribute.Required;
+    canDo: Schema.Attribute.Component<'pros.feature-list', false> &
+      Schema.Attribute.Required;
+    closingCampaign: Schema.Attribute.Enumeration<
+      [
+        'header',
+        'home-hero',
+        'home-closing',
+        'how-it-works-closing',
+        'faq-closing',
+        'login',
+        'trainers-hero',
+        'trainers-closing',
+        'dietitians-hero',
+        'dietitians-closing',
+        'nutritionists-hero',
+        'nutritionists-closing',
+        'blog-coming-soon',
+      ]
+    > &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    hero: Schema.Attribute.Component<'pros.hero', false> &
+      Schema.Attribute.Required;
+    heroImage: Schema.Attribute.Component<'pros.image', false> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-home.pros-home'
+    > &
+      Schema.Attribute.Private;
+    loggingHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    loggingScreenshot: Schema.Attribute.Component<'pros.image', false> &
+      Schema.Attribute.Required;
+    loggingText: Schema.Attribute.Text & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    questions: Schema.Attribute.Component<'pros.faq-list', false> &
+      Schema.Attribute.Required;
+    questionsHref: Schema.Attribute.String & Schema.Attribute.Required;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    stepsLink: Schema.Attribute.Component<'pros.link', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    who: Schema.Attribute.Component<'pros.feature-list', false> &
+      Schema.Attribute.Required;
+  };
+}
+
+export interface ApiProsHowItWorksProsHowItWorks
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pros_how_it_works_pages';
+  info: {
+    description: 'Caltrac for Professionals: the How it works page';
+    displayName: 'Pros \u2014 How it works';
+    pluralName: 'pros-how-it-works-pages';
+    singularName: 'pros-how-it-works';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    can: Schema.Attribute.Component<'pros.step-list', false> &
+      Schema.Attribute.Required;
+    cannot: Schema.Attribute.Component<'pros.step-list', false> &
+      Schema.Attribute.Required;
+    closingCampaign: Schema.Attribute.Enumeration<
+      [
+        'header',
+        'home-hero',
+        'home-closing',
+        'how-it-works-closing',
+        'faq-closing',
+        'login',
+        'trainers-hero',
+        'trainers-closing',
+        'dietitians-hero',
+        'dietitians-closing',
+        'nutritionists-hero',
+        'nutritionists-closing',
+        'blog-coming-soon',
+      ]
+    > &
+      Schema.Attribute.Required;
+    connect: Schema.Attribute.Component<'pros.step-list', false> &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    intro: Schema.Attribute.Text & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-how-it-works.pros-how-it-works'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    sendPage: Schema.Attribute.RichText & Schema.Attribute.Required;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    steps: Schema.Attribute.Component<'pros.step-list', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProsHowYourClientsConnectProsHowYourClientsConnect
+  extends Struct.SingleTypeSchema {
+  collectionName: 'pros_how_your_clients_connects';
+  info: {
+    description: 'Caltrac for Professionals: the page professionals send to their clients';
+    displayName: 'Pros \u2014 How your clients connect';
+    pluralName: 'pros-how-your-clients-connects';
+    singularName: 'pros-how-your-clients-connect';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    before: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    cannot: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    canSee: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    connect: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faq: Schema.Attribute.Component<'pros.faq-list', false> &
+      Schema.Attribute.Required;
+    installHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    intro: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-how-your-clients-connect.pros-how-your-clients-connect'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    steps: Schema.Attribute.Component<'pros.step-list', false> &
+      Schema.Attribute.Required;
+    stopping: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProsLoginProsLogin extends Struct.SingleTypeSchema {
+  collectionName: 'pros_logins';
+  info: {
+    description: 'Caltrac for Professionals: the copy around the sign-in card';
+    displayName: 'Pros \u2014 Login';
+    pluralName: 'pros-logins';
+    singularName: 'pros-login';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    appLine: Schema.Attribute.String & Schema.Attribute.Required;
+    apply: Schema.Attribute.Component<'pros.cta', false> &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    howItWorks: Schema.Attribute.Component<'pros.link', false> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-login.pros-login'
+    > &
+      Schema.Attribute.Private;
+    newcomersHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    newcomersText: Schema.Attribute.Text & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'pros.seo', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProsSiteProsSite extends Struct.SingleTypeSchema {
+  collectionName: 'pros_sites';
+  info: {
+    description: 'Caltrac for Professionals: copy shared by every page, the header and footer, the store badges and the shared sections';
+    displayName: 'Pros \u2014 Site';
+    pluralName: 'pros-sites';
+    singularName: 'pros-site';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    accessWording: Schema.Attribute.Text & Schema.Attribute.Required;
+    applyLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    applyPageUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    applyUtmMedium: Schema.Attribute.String & Schema.Attribute.Required;
+    applyUtmSource: Schema.Attribute.String & Schema.Attribute.Required;
+    caltracUrl: Schema.Attribute.String & Schema.Attribute.Required;
+    clientControl: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    closingButton: Schema.Attribute.String & Schema.Attribute.Required;
+    closingHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    closingText: Schema.Attribute.Text & Schema.Attribute.Required;
+    companyName: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    descriptor: Schema.Attribute.RichText & Schema.Attribute.Required;
+    focus: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    footerAppHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    footerLinks: Schema.Attribute.Component<'pros.link', true> &
+      Schema.Attribute.Required;
+    fourSteps: Schema.Attribute.Component<'pros.step-list', false> &
+      Schema.Attribute.Required;
+    headerApply: Schema.Attribute.Component<'pros.cta', false> &
+      Schema.Attribute.Required;
+    headerLinks: Schema.Attribute.Component<'pros.link', true> &
+      Schema.Attribute.Required;
+    hipaaClause: Schema.Attribute.Text & Schema.Attribute.Required;
+    homeLink: Schema.Attribute.Component<'pros.link', false> &
+      Schema.Attribute.Required;
+    howItWorksLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    keyFacts: Schema.Attribute.Component<'pros.key-fact', true> &
+      Schema.Attribute.Required;
+    keyFactsCaption: Schema.Attribute.String & Schema.Attribute.Required;
+    legalEmail: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::pros-site.pros-site'
+    > &
+      Schema.Attribute.Private;
+    logo: Schema.Attribute.Component<'pros.image', false> &
+      Schema.Attribute.Required;
+    organizationContactType: Schema.Attribute.String &
+      Schema.Attribute.Required;
+    professionals: Schema.Attribute.Component<'pros.link', true> &
+      Schema.Attribute.Required;
+    professionalsLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    proofCompanyHeading: Schema.Attribute.String & Schema.Attribute.Required;
+    proofCompanyLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    proofContactLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    proofScreenshots: Schema.Attribute.Component<'pros.image', true> &
+      Schema.Attribute.Required;
+    proofVideo: Schema.Attribute.Component<'pros.proof-video', false>;
+    publishedAt: Schema.Attribute.DateTime;
+    qualifier: Schema.Attribute.String & Schema.Attribute.Required;
+    scope: Schema.Attribute.Component<'pros.section', false> &
+      Schema.Attribute.Required;
+    signIn: Schema.Attribute.Component<'pros.link', false> &
+      Schema.Attribute.Required;
+    siteName: Schema.Attribute.String & Schema.Attribute.Required;
+    storeBadges: Schema.Attribute.Component<'pros.store-badge', true> &
+      Schema.Attribute.Required;
+    supportEmail: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedLabel: Schema.Attribute.String & Schema.Attribute.Required;
+    wordmark: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1123,6 +1684,16 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::category.category': ApiCategoryCategory;
       'api::global.global': ApiGlobalGlobal;
+      'api::pros-blog-landing.pros-blog-landing': ApiProsBlogLandingProsBlogLanding;
+      'api::pros-faq.pros-faq': ApiProsFaqProsFaq;
+      'api::pros-for-dietitians.pros-for-dietitians': ApiProsForDietitiansProsForDietitians;
+      'api::pros-for-nutritionists.pros-for-nutritionists': ApiProsForNutritionistsProsForNutritionists;
+      'api::pros-for-personal-trainers.pros-for-personal-trainers': ApiProsForPersonalTrainersProsForPersonalTrainers;
+      'api::pros-home.pros-home': ApiProsHomeProsHome;
+      'api::pros-how-it-works.pros-how-it-works': ApiProsHowItWorksProsHowItWorks;
+      'api::pros-how-your-clients-connect.pros-how-your-clients-connect': ApiProsHowYourClientsConnectProsHowYourClientsConnect;
+      'api::pros-login.pros-login': ApiProsLoginProsLogin;
+      'api::pros-site.pros-site': ApiProsSiteProsSite;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

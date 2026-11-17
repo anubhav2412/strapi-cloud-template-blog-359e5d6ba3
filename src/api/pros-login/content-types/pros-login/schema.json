@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "pros_logins",
+  "info": {
+    "singularName": "pros-login",
+    "pluralName": "pros-logins",
+    "displayName": "Pros — Login",
+    "description": "Caltrac for Professionals: the copy around the sign-in card"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.seo",
+      "required": true
+    },
+    "newcomersHeading": {
+      "type": "string",
+      "required": true
+    },
+    "newcomersText": {
+      "type": "text",
+      "required": true
+    },
+    "apply": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.cta",
+      "required": true
+    },
+    "howItWorks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.link",
+      "required": true
+    },
+    "appLine": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

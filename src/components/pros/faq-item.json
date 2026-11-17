@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_pros_faq_items",
+  "info": {
+    "displayName": "FAQ item",
+    "icon": "question"
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "richtext",
+      "required": true
+    },
+    "storeBadges": {
+      "type": "boolean",
+      "default": false
+    },
+    "structuredData": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

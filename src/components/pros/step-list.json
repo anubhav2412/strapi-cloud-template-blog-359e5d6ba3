@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_pros_step_lists",
+  "info": {
+    "displayName": "Step list",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pros.step",
+      "required": true
+    }
+  }
+}

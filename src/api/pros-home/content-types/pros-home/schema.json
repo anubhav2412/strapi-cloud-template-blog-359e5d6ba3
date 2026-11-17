@@ -1,0 +1,105 @@
+{
+  "kind": "singleType",
+  "collectionName": "pros_homes",
+  "info": {
+    "singularName": "pros-home",
+    "pluralName": "pros-homes",
+    "displayName": "Pros — Home",
+    "description": "Caltrac for Professionals: the home page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.seo",
+      "required": true
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.hero",
+      "required": true
+    },
+    "heroImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.image",
+      "required": true
+    },
+    "canDo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.feature-list",
+      "required": true
+    },
+    "who": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.feature-list",
+      "required": true
+    },
+    "loggingHeading": {
+      "type": "string",
+      "required": true
+    },
+    "loggingScreenshot": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.image",
+      "required": true
+    },
+    "loggingText": {
+      "type": "text",
+      "required": true
+    },
+    "stepsLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.link",
+      "required": true
+    },
+    "questions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.faq-list",
+      "required": true
+    },
+    "questionsHref": {
+      "type": "string",
+      "required": true
+    },
+    "allQuestionsLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.link",
+      "required": true
+    },
+    "applyPage": {
+      "type": "richtext",
+      "required": true
+    },
+    "closingCampaign": {
+      "type": "enumeration",
+      "enum": [
+        "header",
+        "home-hero",
+        "home-closing",
+        "how-it-works-closing",
+        "faq-closing",
+        "login",
+        "trainers-hero",
+        "trainers-closing",
+        "dietitians-hero",
+        "dietitians-closing",
+        "nutritionists-hero",
+        "nutritionists-closing",
+        "blog-coming-soon"
+      ],
+      "required": true
+    }
+  }
+}

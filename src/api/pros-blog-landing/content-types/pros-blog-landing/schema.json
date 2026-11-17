@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "pros_blog_landings",
+  "info": {
+    "singularName": "pros-blog-landing",
+    "pluralName": "pros-blog-landings",
+    "displayName": "Pros — Blog landing",
+    "description": "Caltrac for Professionals: the blog page before the blog launches"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.seo",
+      "required": true
+    },
+    "comingSoonLine": {
+      "type": "text",
+      "required": true
+    },
+    "apply": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.cta",
+      "required": true
+    },
+    "mascot": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.image",
+      "required": true
+    }
+  }
+}

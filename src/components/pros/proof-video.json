@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_pros_proof_videos",
+  "info": {
+    "displayName": "Proof video",
+    "icon": "play"
+  },
+  "options": {},
+  "attributes": {
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "poster": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "captions": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "captionsLabel": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

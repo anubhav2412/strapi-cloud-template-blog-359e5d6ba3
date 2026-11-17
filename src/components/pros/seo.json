@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_pros_seos",
+  "info": {
+    "displayName": "SEO",
+    "icon": "search",
+    "description": "A page's title, description, h1 and sitemap settings"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "h1": {
+      "type": "string",
+      "required": true
+    },
+    "ogTitle": {
+      "type": "string"
+    },
+    "indexable": {
+      "type": "boolean",
+      "required": true
+    },
+    "updated": {
+      "type": "date"
+    },
+    "breadcrumb": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "kind": "singleType",
+  "collectionName": "pros_sites",
+  "info": {
+    "singularName": "pros-site",
+    "pluralName": "pros-sites",
+    "displayName": "Pros — Site",
+    "description": "Caltrac for Professionals: copy shared by every page, the header and footer, the store badges and the shared sections"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true
+    },
+    "companyName": {
+      "type": "string",
+      "required": true
+    },
+    "supportEmail": {
+      "type": "string",
+      "required": true
+    },
+    "legalEmail": {
+      "type": "string",
+      "required": true
+    },
+    "caltracUrl": {
+      "type": "string",
+      "required": true
+    },
+    "applyPageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "applyUtmSource": {
+      "type": "string",
+      "required": true
+    },
+    "applyUtmMedium": {
+      "type": "string",
+      "required": true
+    },
+    "wordmark": {
+      "type": "string",
+      "required": true
+    },
+    "qualifier": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.image",
+      "required": true
+    },
+    "applyLabel": {
+      "type": "string",
+      "required": true
+    },
+    "howItWorksLabel": {
+      "type": "string",
+      "required": true
+    },
+    "updatedLabel": {
+      "type": "string",
+      "required": true
+    },
+    "homeLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.link",
+      "required": true
+    },
+    "professionalsLabel": {
+      "type": "string",
+      "required": true
+    },
+    "professionals": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pros.link",
+      "required": true
+    },
+    "headerLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pros.link",
+      "required": true
+    },
+    "headerApply": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.cta",
+      "required": true
+    },
+    "signIn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.link",
+      "required": true
+    },
+    "footerLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pros.link",
+      "required": true
+    },
+    "footerAppHeading": {
+      "type": "string",
+      "required": true
+    },
+    "descriptor": {
+      "type": "richtext",
+      "required": true
+    },
+    "storeBadges": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pros.store-badge",
+      "required": true
+    },
+    "organizationContactType": {
+      "type": "string",
+      "required": true
+    },
+    "keyFactsCaption": {
+      "type": "string",
+      "required": true
+    },
+    "keyFacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pros.key-fact",
+      "required": true
+    },
+    "focus": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "clientControl": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "fourSteps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.step-list",
+      "required": true
+    },
+    "scope": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.section",
+      "required": true
+    },
+    "proofScreenshots": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pros.image",
+      "required": true
+    },
+    "proofVideo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.proof-video"
+    },
+    "proofCompanyHeading": {
+      "type": "string",
+      "required": true
+    },
+    "proofCompanyLabel": {
+      "type": "string",
+      "required": true
+    },
+    "proofContactLabel": {
+      "type": "string",
+      "required": true
+    },
+    "closingHeading": {
+      "type": "string",
+      "required": true
+    },
+    "closingText": {
+      "type": "text",
+      "required": true
+    },
+    "closingButton": {
+      "type": "string",
+      "required": true
+    },
+    "hipaaClause": {
+      "type": "text",
+      "required": true
+    },
+    "accessWording": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

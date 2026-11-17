@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_pros_images",
+  "info": {
+    "displayName": "Image",
+    "icon": "picture",
+    "description": "An image with its alt text for this use; an empty alt marks it decorative"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "required": true
+    },
+    "alt": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    }
+  }
+}
