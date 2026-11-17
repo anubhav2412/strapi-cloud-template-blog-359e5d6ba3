@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blog_links",
+  "info": {
+    "displayName": "Link",
+    "icon": "link",
+    "description": "A label and a URL"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

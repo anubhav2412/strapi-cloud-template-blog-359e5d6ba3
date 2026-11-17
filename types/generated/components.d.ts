@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BlogLink extends Struct.ComponentSchema {
+  collectionName: 'components_blog_links';
+  info: {
+    description: 'A label and a URL';
+    displayName: 'Link';
+    icon: 'link';
+  };
+  attributes: {
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ProsCta extends Struct.ComponentSchema {
   collectionName: 'components_pros_ctas';
   info: {
@@ -293,6 +306,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'blog.link': BlogLink;
       'pros.cta': ProsCta;
       'pros.faq-item': ProsFaqItem;
       'pros.faq-list': ProsFaqList;

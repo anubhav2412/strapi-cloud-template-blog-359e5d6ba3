@@ -22,13 +22,32 @@
       "allowedTypes": ["images", "files", "videos"]
     },
     "email": {
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "articles": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::article.article",
       "mappedBy": "author"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "role": {
+      "type": "string"
+    },
+    "credentials": {
+      "type": "string"
+    },
+    "bio": {
+      "type": "richtext"
+    },
+    "links": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.link"
     }
   }
 }
