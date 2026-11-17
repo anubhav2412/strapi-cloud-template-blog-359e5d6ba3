@@ -42,7 +42,7 @@ yarn strapi deploy
 
 ## Caltrac for Professionals content
 
-The copy and images of the Caltrac for Professionals site (affiliate.caltrac.ai) live in this Strapi, next to caltrac.ai's `/nutrition` articles. They have their own single types and components. The web's types (`article`, `author`, `category`, `global`, `about`) and the `shared.*` components are neither used nor changed by them.
+The copy and images of the Caltrac for Professionals site (affiliate.caltrac.ai) live in this Strapi, next to caltrac.ai's `/nutrition` articles. They have their own single types and components. The site's blog, the professionals blog, shares caltrac.ai's `article`, `category` and `author` types: each article and category has a `site`, and the blog's blocks are the `blog.*` components (see [The professionals blog](#the-professionals-blog)). The web's other types (`global`, `about`) are neither used nor changed by the site.
 
 ### Content model
 
@@ -102,6 +102,78 @@ Three sentences are stored once and used in several places. A text that uses one
 - The llms.txt section headings: "Product", "Get the app", "Caltrac".
 - The portal pages: the sign-in card on `/login` and the not-found page.
 
+### The professionals blog
+
+The blog at affiliate.caltrac.ai/blog is written here, in **Content Manager → Article**, by the SEO and marketing team. caltrac.ai's `/nutrition` articles live in the same type. The `site` field says which site an article belongs to.
+
+#### Site
+
+- **`site`** is on every article and category: `caltrac` (caltrac.ai) or `professionals` (the blog). New articles and categories start as `caltrac`. For the blog, **always set Site to `professionals` first.**
+- An article's category must be on the same site. The blog's category is **Professionals**.
+- Articles and categories that existed before the field was added were given `caltrac` when Strapi started (see [Backfill](#backfill)).
+- Saving or publishing an article that breaks a rule is refused, with one of these messages:
+  - `Site is "caltrac", and caltrac.ai can't show the blog blocks (blog.callout, …). For the professionals blog, set Site to "professionals". For caltrac.ai, remove those blocks.`
+  - `The category "…" is on the "caltrac" site, and this article's Site is "professionals". Pick a category of the "professionals" site, or change Site.`
+
+  The check runs in `src/pros-blog/` on create, update, publish, duplicate and discard-changes, from the admin, the REST API and server code alike. It reads the article as it would be saved, so an edit that leaves out the site, the blocks or the category is checked against what is stored.
+
+#### Writing an article
+
+1. Content Manager → Article → Create new entry. Set **Site** to `professionals` and **Category** to Professionals.
+2. Fill in the title (the slug follows it), the description (up to 160 characters), the cover, the author and, if one checked it, **Reviewed by**.
+3. Add the blocks (below). **Related articles** are optional hand-picked articles; the site fills up to three with the category's newest.
+4. Fill in **Seo** (below).
+5. **Save** keeps a draft. A draft is never on the site. Have it checked, then **Publish**. Publishing calls the site's webhook, which updates the site.
+6. To take an article down, **Unpublish** it. Never delete: unpublishing keeps the draft, so nothing is lost, the same as the pros types.
+
+The draft **Sample article — do not publish** (`sample-article-do-not-publish`) uses every block with sample text and images, and its Seo has Noindex on. Use it as a reference, and never publish it.
+
+#### Blocks
+
+The blog uses the `blog.*` blocks. caltrac.ai can't show them, so they are refused on a `caltrac` article. The four `shared.*` blocks work on both sites; on the blog, prefer Image and Gallery to Media and Slider, since only the blog's blocks carry alt text for their use.
+
+| Block | What it is for | How it shows, and its limits |
+| --- | --- | --- |
+| Rich text (`shared.rich-text`) | The body text | Markdown: headings, bold, italic, links, lists. Level 2 and 3 headings (`##`, `###`) make the table of contents. Raw HTML is not shown. |
+| Image (`blog.image`) | One picture | Alt text, optional caption and credit. Layout: `inline` (the text's width), `wide` or `full`. |
+| Gallery (`blog.gallery`) | Several pictures | At least one item, each with its alt text and an optional caption. Layout: `grid` or `carousel`. |
+| Image and text (`blog.image-text`) | A picture beside a short text | Alt text; the image on the `left` or `right`; the text is Markdown. |
+| Callout (`blog.callout`) | One point to stand out | Kind: `tip`, `note` or `warning`; optional title; Markdown text. |
+| Key takeaways (`blog.takeaways`) | The article's main points, near the top | Title (default "Key takeaways") and at least one point. |
+| FAQ (`blog.faq`) | Questions readers ask | At least one question, each with a Markdown answer. The questions also go in the page's FAQ structured data. |
+| Video (`blog.video`) | A YouTube or Vimeo video | The video's URL; a title, read out by screen readers; an optional caption. The page shows a picture and a play button, and loads the player only when the reader clicks. Any other host shows nothing. |
+| Call to action (`blog.cta`) | A button | Kind `apply`: the Apply link, with `campaign` as its `utm_campaign`. Kind `install`: the App Store and Google Play badges. Kind `link`: a link to `href`, which only this kind uses. |
+| Table (`blog.table`) | Rows and columns | The table as CSV, one row per line, cells split by commas; put a cell that holds a comma in double quotes. **Header row** (on by default) makes the first row the column headings. Optional caption. |
+| Quote (`shared.quote`) | A sentence set apart | Title (who said it) and text. |
+| Media, Slider (`shared.media`, `shared.slider`) | A file; several pictures | caltrac.ai's blocks; no alt text for the use. |
+
+#### Images
+
+- Sizes: cover 1600 × 900; `wide` and `full` images 1600 px wide; `inline` images 1200 px wide; gallery images 1200 px wide; author photo 400 × 400.
+- Formats: JPEG for photos, PNG for screenshots and graphics. The blog blocks' image fields take images only.
+- **Alt text** is written per use, in the block's Alt field, not on the media library file. Describe what is in the picture, for someone who can't see it. Leave it empty only for a decorative picture that adds nothing to the text.
+
+#### Seo
+
+- **Meta title:** up to 60 characters. **Meta description:** up to 160.
+- **Share image:** the picture shown when the article is shared. Empty, the cover is used.
+- **Canonical URL:** only for an article first published elsewhere; it holds that page's address. Empty for everything written for the blog.
+- **Noindex:** on keeps the article out of search engines. Off by default.
+
+#### Authors
+
+Content Manager → Author: name, **slug** (from the name; the author's page is /blog/author/<slug>), **role**, **credentials**, **bio** (Markdown), **links** (each a label and a URL) and the avatar, which is the author's photo. **Email** is private: the API never returns it.
+
+#### Backfill
+
+`src/pros-blog/backfill.js` runs from `src/bootstrap.js` on every start, after the template's seed and before the pros seed, and fills only what is still empty: `site` becomes `caltrac` on every article and category row (drafts and published versions) that has none, and an author without a slug gets one from the name, made unique the way the admin makes it. Rows that have a value are never touched, and `updatedAt` stays as it was. Each start logs one line, for example:
+
+```
+[pros-blog-backfill] {"article":0,"category":0,"authorSlug":0}
+```
+
+It runs at start-up rather than as a file in `database/migrations/`, because Strapi runs those before it adds new columns. An error is logged, and Strapi still starts.
+
 ### Local development
 
 Use Node 22, which matches `engines` and Strapi Cloud, and install with `npm ci` so `package-lock.json` stays as committed. With Homebrew's `node@22`:
@@ -111,9 +183,11 @@ PATH=/opt/homebrew/opt/node@22/bin:$PATH npm ci
 PATH=/opt/homebrew/opt/node@22/bin:$PATH npm run develop
 ```
 
+`npm test` runs the unit tests in `tests/` with Node's test runner.
+
 ### The pros seed
 
-`scripts/seed-pros.js` fills the pros single types from `data/pros/`. It runs from `src/bootstrap.js` on every start, after the template's seed, and on demand:
+`scripts/seed-pros.js` fills the pros single types from `data/pros/`, then creates the blog's category and its sample article. It runs from `src/bootstrap.js` on every start, after the template's seed, and on demand:
 
 ```
 npm run seed:pros
@@ -129,21 +203,26 @@ npm run seed:pros
   ```
 
   `--reseed` can be repeated. It creates a type only when the type has no entry. A type that still has one is skipped.
+- The blog's items follow the same rules, under their own keys in the same record:
+  - `blog-category`: the category Professionals (`slug` professionals, `site` professionals), from `data/pros/blog-category.json`.
+  - `blog-sample`: the article **Sample article — do not publish** (`slug` sample-article-do-not-publish, `site` professionals), from `data/pros/blog-sample.json`. It is created as a **draft only** and is never published. It goes in the Professionals category when a professionals category with that slug exists.
+
+  Each counts as present when a category or article with its slug exists. Both can be seeded again locally, for example `npm run seed:pros -- --reseed blog-sample`.
 - A run holds a lock until it ends, so two runs at once cannot both create a type: on Postgres (Strapi Cloud) the second run waits; on SQLite it waits up to 5 seconds, then fails without writing anything. MySQL takes no lock.
-- Media fields in the JSON hold an image's file name from `data/pros/manifest.json`. A media library file with that name and byte size is reused. Otherwise the image is uploaded from `data/pros/uploads/`, byte for byte, after its sha256 is checked against the manifest.
+- Media fields in the JSON, including those in an article's blocks, hold an image's file name from `data/pros/manifest.json`. A media library file with that name and byte size is reused. Otherwise the image is uploaded from `data/pros/uploads/`, byte for byte, after its sha256 is checked against the manifest. The sample article uses only the pros images, which the pros seed has already uploaded.
 - The text keeps the `{{accessWording}}`, `{{hipaaClause}}` and `{{focus}}` tokens.
 - It creates no permissions. The Public role is unchanged.
 - Each run logs one line, for example:
 
   ```
-  [pros-seed] {"created":[],"skipped":["pros-site","pros-home",...],"recorded":[],"uploaded":[],"reused":[]}
+  [pros-seed] {"created":[],"skipped":["pros-site","pros-home",...,"blog-category","blog-sample"],"recorded":[],"uploaded":[],"reused":[]}
   ```
 
   An error is logged, the run's changes are rolled back, and Strapi still starts.
 
 ### `data/pros` is the day-one seed
 
-`data/pros/` holds the content the pros types were seeded with on day one, taken from the affiliate site's copy at that time. It seeded each type once. It is not regenerated, and it is not edited.
+`data/pros/` holds the content the pros types were seeded with on day one, taken from the affiliate site's copy at that time, and the blog's category and sample article. It seeded each one once. It is not regenerated, and it is not edited.
 
 Once the site is live, the published content in this Strapi is the source of truth: content changes are made in the admin. The affiliate site keeps a committed fallback snapshot of that published content. It is refreshed with `npm run pros:snapshot` in the Caltrac-affiliate repo, run with `STRAPI_API_URL` and a read-only `STRAPI_PROS_TOKEN`.
 
@@ -152,7 +231,7 @@ Once the site is live, the published content in this Strapi is the source of tru
 The site reads the pros types with a read-only token. It is created in the admin and kept in the site's environment, never in this repo:
 
 - Settings → API Tokens → Create new API Token, token type **Custom**.
-- Permissions: `find` on each `pros-*` single type (single types have no `findOne`), and under Upload, `find` and `findOne`.
+- Permissions: `find` on each `pros-*` single type (single types have no `findOne`); for the blog, `find` and `findOne` on Article, Category and Author; and under Upload, `find` and `findOne`.
 - The Public role is unchanged, so the pros types are not readable without the token.
 - `find` also returns a type's draft when a request asks for `status=draft`. Without it, the response is the published version.
 
