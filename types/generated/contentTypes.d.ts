@@ -502,6 +502,9 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    site: Schema.Attribute.Enumeration<['caltrac', 'professionals']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'caltrac'>;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
@@ -568,6 +571,9 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false>;
+    site: Schema.Attribute.Enumeration<['caltrac', 'professionals']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'caltrac'>;
     slug: Schema.Attribute.UID;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

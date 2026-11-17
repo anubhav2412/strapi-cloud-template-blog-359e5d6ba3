@@ -31,6 +31,12 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "site": {
+      "type": "enumeration",
+      "enum": ["caltrac", "professionals"],
+      "required": true,
+      "default": "caltrac"
     }
   }
 }
