@@ -271,4 +271,14 @@ async function main() {
 
 module.exports = async () => {
   await seedExampleApp();
+
+  // The Caltrac for Professionals seed creates each pros type once, and never
+  // again after an editor changes or deletes it. A failure is logged and never
+  // stops Strapi from starting, so the require sits inside the try as well.
+  try {
+    const { seedPros } = require('../scripts/seed-pros');
+    await seedPros(strapi);
+  } catch (error) {
+    strapi.log.error(`[pros-seed] did not complete; Strapi starts without it. ${error.stack ?? error}`);
+  }
 };

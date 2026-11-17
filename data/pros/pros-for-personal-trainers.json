@@ -1,0 +1,82 @@
+{
+  "seo": {
+    "title": "Free Food Log for Personal Training Clients | Caltrac",
+    "description": "See what your personal training clients eat between sessions, from their own photo or text logs, and comment on meals. Free to join.",
+    "h1": "See what your clients eat between sessions, free",
+    "indexable": true,
+    "updated": "2026-11-17",
+    "breadcrumb": "For personal trainers"
+  },
+  "hero": {
+    "intro": "Caltrac for Professionals lets personal trainers see the meals their clients choose to share, and comment on the ones worth talking about. Clients log with a photo or a short description, and they decide what you see.",
+    "apply": {
+      "label": "Apply to join",
+      "campaign": "trainers-hero"
+    }
+  },
+  "benefits": {
+    "heading": "Where it helps",
+    "items": [
+      {
+        "title": "When progress slows.",
+        "text": "Look at what a client has actually been logging, instead of relying on what they remember."
+      },
+      {
+        "title": "Short, specific feedback.",
+        "text": "Comment on a single meal. Your client reads it in the app, next to the food."
+      },
+      {
+        "title": "Less typing for you.",
+        "text": "Calories and macros are estimated for each meal, so you spend your time reading and replying."
+      }
+    ]
+  },
+  "getClients": {
+    "heading": "Get your clients on Caltrac",
+    "body": "Apply (free, reviewed within 24–48 hours), get your linking code and give it to your clients. They enter it in Caltrac Connect and send you a request; access starts when you accept it.",
+    "link": {
+      "label": "How it works",
+      "href": "/how-it-works"
+    }
+  },
+  "week": {
+    "heading": "A week between sessions",
+    "steps": [
+      {
+        "text": "For example, a client trains with you on Monday and Thursday."
+      },
+      {
+        "text": "In between, they log meals with a photo or a short description."
+      },
+      {
+        "text": "Before Thursday you open the meals they have shared, pick the ones worth discussing and comment on them, so the session starts from what they actually ate."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Questions from trainers",
+    "items": [
+      {
+        "question": "Can I see a client's meals before they accept?",
+        "answer": "No. Access starts only when the client enters your code and sends a request, and you accept it."
+      },
+      {
+        "question": "What can I do with a meal?",
+        "answer": "Read it and comment on it."
+      },
+      {
+        "question": "Do my clients need an iPhone?",
+        "answer": "No. Caltrac is on iPhone and Android."
+      },
+      {
+        "question": "Can I comment on a meal before a session?",
+        "answer": "Yes. Comment on any meal a client has shared. They read it in the app, next to the food."
+      },
+      {
+        "question": "What if a client stops sharing?",
+        "answer": "Your access to their meals ends immediately. They don't need approval from you or from Caltrac."
+      }
+    ]
+  },
+  "closingCampaign": "trainers-closing"
+}

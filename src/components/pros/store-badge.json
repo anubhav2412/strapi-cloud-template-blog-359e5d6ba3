@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_pros_store_badges",
+  "info": {
+    "displayName": "Store badge",
+    "icon": "store"
+  },
+  "options": {},
+  "attributes": {
+    "store": {
+      "type": "enumeration",
+      "enum": [
+        "ios",
+        "android"
+      ],
+      "required": true
+    },
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "alt": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "required": true
+    },
+    "width": {
+      "type": "integer",
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "required": true
+    },
+    "listingUrl": {
+      "type": "string",
+      "required": true
+    },
+    "badgeUrl": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

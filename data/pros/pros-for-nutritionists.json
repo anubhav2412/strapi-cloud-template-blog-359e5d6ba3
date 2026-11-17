@@ -1,0 +1,73 @@
+{
+  "seo": {
+    "title": "Free Client Food Tracking for Nutritionists | Caltrac",
+    "description": "Start client reviews from the food: shared meals with calories and macros already estimated, and comments in the client's app. Free to join.",
+    "h1": "Start every review from the food, not from data entry",
+    "indexable": true,
+    "updated": "2026-11-17",
+    "breadcrumb": "For nutritionists"
+  },
+  "hero": {
+    "intro": "Caltrac for Professionals lets nutritionists see the meals clients choose to share, with calories and macros already estimated for each one. Your review starts from what's on the plate.",
+    "apply": {
+      "label": "Apply to join",
+      "campaign": "nutritionists-hero"
+    },
+    "howItWorks": {
+      "label": "See how it works",
+      "href": "/how-it-works"
+    }
+  },
+  "savesTime": {
+    "heading": "Where it saves time",
+    "items": [
+      {
+        "title": "No number entry.",
+        "text": "Estimates arrive with each meal, so your time goes to patterns and conversation.",
+        "icon": "estimates"
+      },
+      {
+        "title": "Find the meals worth discussing.",
+        "text": "Look through what a client has logged and choose the ones to talk about.",
+        "icon": "choose"
+      },
+      {
+        "title": "Comment where it matters.",
+        "text": "Your note appears next to the meal in your client's app.",
+        "icon": "comment"
+      }
+    ]
+  },
+  "conversations": [
+    {
+      "heading": "Using meals in coaching conversations",
+      "body": "Use the meals as the starting point when you talk about habits, portions and food choices. Clients can edit an estimate, so the conversation can start with \"does this look right to you?\""
+    },
+    {
+      "heading": "Meal reviews that start the discussion",
+      "body": "Choose two or three shared meals before a conversation, such as a typical weekday lunch, a meal the client edited, or one you want to ask about. Each gives you something concrete to talk about, and a comment on the meal carries your question into the client's app."
+    }
+  ],
+  "faq": {
+    "heading": "Questions from nutritionists",
+    "items": [
+      {
+        "question": "Can I add clients myself?",
+        "answer": "No. Each client links to you with your code: they send a request, and access starts when you accept it."
+      },
+      {
+        "question": "How are calories worked out?",
+        "answer": "Clients log with a photo or a short description, Caltrac estimates, and clients can edit the estimate."
+      },
+      {
+        "question": "Is it free?",
+        "answer": "Caltrac for Professionals is free to join."
+      },
+      {
+        "question": "How do I bring up a client's eating habits?",
+        "answer": "Start from a shared meal. Comment on it, or raise it in your next conversation, and ask the client whether the estimate looks right to them."
+      }
+    ]
+  },
+  "closingCampaign": "nutritionists-closing"
+}

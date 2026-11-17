@@ -1,0 +1,77 @@
+{
+  "seo": {
+    "title": "Free Photo Food Diary for Dietitians | Caltrac",
+    "description": "Review the meals your clients choose to share, as photos with estimated calories and macros, between appointments. Free for dietitians.",
+    "h1": "Follow what your clients actually ate, between appointments",
+    "indexable": true,
+    "updated": "2026-11-17",
+    "breadcrumb": "For dietitians"
+  },
+  "hero": {
+    "intro": "Caltrac for Professionals gives dietitians a view of the meals clients choose to share, with estimated calories and macros. You can start from the meals as they were logged, not from a diary rebuilt from memory the night before.",
+    "apply": {
+      "label": "Apply to join",
+      "campaign": "dietitians-hero"
+    },
+    "howItWorks": {
+      "label": "See how it works",
+      "href": "/how-it-works"
+    }
+  },
+  "fits": {
+    "heading": "Where it fits in your practice",
+    "items": [
+      {
+        "title": "Before an appointment.",
+        "text": "Look through the meals a client has logged, so the conversation starts from the food."
+      },
+      {
+        "title": "Between appointments.",
+        "text": "Comment on a specific meal. Your client reads it in the app, next to the food."
+      },
+      {
+        "title": "Consent built in.",
+        "text": "You see meals only after the client sends a request and you accept it, and they can stop at any time."
+      }
+    ]
+  },
+  "review": {
+    "heading": "A review between appointments",
+    "body": "Before an appointment, open the meals a client has chosen to share and read through them. Pick the ones to talk about, and comment on a meal if you want the client to think about it before you meet. The client reads your comment in the app, next to the food."
+  },
+  "estimates": {
+    "heading": "Estimates you can question",
+    "body": "Clients log a meal with a photo or a short description. Caltrac estimates calories and macros, and clients can edit the foods and serving sizes before saving. Treat the numbers as a starting point, apply your own judgment, and decide how much weight to give them with each client."
+  },
+  "estimatesScreenshot": {
+    "image": "pros-meal-logged.jpg",
+    "alt": "A meal logged from a photo in the Caltrac app, showing the foods found before saving"
+  },
+  "privacy": {
+    "heading": "Privacy and clinical use",
+    "body": "Caltrac doesn't diagnose or treat anything and doesn't give medical advice. It doesn't replace your clinical judgment. {{hipaaClause}} See our [Terms & Conditions](/terms#not-medical-advice) and [Privacy Policy](/privacy)."
+  },
+  "faq": {
+    "heading": "Questions from dietitians",
+    "items": [
+      {
+        "question": "Can I see a client's meals without their permission?",
+        "answer": "No. Every link starts with the client."
+      },
+      {
+        "question": "Are the calories and macros exact?",
+        "answer": "No. They're estimates, and clients can edit them."
+      },
+      {
+        "question": "What happens if a client stops sharing?",
+        "answer": "Your access ends immediately. The client doesn't need approval from you or from Caltrac."
+      },
+      {
+        "question": "Is Caltrac HIPAA compliant?",
+        "answer": "No. {{hipaaClause}} See our [Terms & Conditions](/terms#not-medical-advice).",
+        "structuredData": false
+      }
+    ]
+  },
+  "closingCampaign": "dietitians-closing"
+}

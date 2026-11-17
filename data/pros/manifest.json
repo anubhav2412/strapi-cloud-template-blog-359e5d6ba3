@@ -1,0 +1,83 @@
+[
+  {
+    "name": "pros-logo-mark.png",
+    "source": "logo-mark.png",
+    "sha256": "b64399f0078e42495745b2da3ec54d4a4a68bfbf2d75369cacc05a81e2f49f58",
+    "bytes": 599322,
+    "width": 680,
+    "height": 740,
+    "mime": "image/png"
+  },
+  {
+    "name": "pros-caltrac-hero-subject.png",
+    "source": "caltrac-hero-subject.png",
+    "sha256": "91a039a241fb46ab8f63408577469ebb2138bc910f37fb85d0a3dc205bd7c9eb",
+    "bytes": 635257,
+    "width": 798,
+    "height": 636,
+    "mime": "image/png"
+  },
+  {
+    "name": "pros-get-started.png",
+    "source": "pros/get-started.png",
+    "sha256": "b07ee511d0f62821901f352758901298e07ba0130073e492421e747893e54546",
+    "bytes": 1352503,
+    "width": 1254,
+    "height": 1254,
+    "mime": "image/png"
+  },
+  {
+    "name": "pros-meal-logged.jpg",
+    "source": "pros/meal-logged.jpg",
+    "sha256": "64bb6213227cef3ed4eb986955577d956c33d2cee64350ed52a1ad9f1ab3fa31",
+    "bytes": 106746,
+    "width": 660,
+    "height": 1434,
+    "mime": "image/jpeg"
+  },
+  {
+    "name": "pros-proof-meals.png",
+    "source": "pros/proof/meals.png",
+    "sha256": "5326e0073e5fcf3a9627879241da4b144433eeef4295089bf338b31dad2a75db",
+    "bytes": 337970,
+    "width": 592,
+    "height": 790,
+    "mime": "image/png"
+  },
+  {
+    "name": "pros-proof-comment.png",
+    "source": "pros/proof/comment.png",
+    "sha256": "d9fd97163d6f232d9596a60c5265fc645a257701d9c52462855cc69255217e95",
+    "bytes": 83182,
+    "width": 592,
+    "height": 790,
+    "mime": "image/png"
+  },
+  {
+    "name": "pros-proof-code.png",
+    "source": "pros/proof/code.png",
+    "sha256": "48f776b44e24a4bc6f6cf620ca76edaaaf28e7320805b5b944fed2929717cee4",
+    "bytes": 67662,
+    "width": 592,
+    "height": 790,
+    "mime": "image/png"
+  },
+  {
+    "name": "pros-badges-app-store.svg",
+    "source": "pros/badges/app-store.svg",
+    "sha256": "a26fc5b38380272c92e9019a2eb8b45542a66814b3e2b203772db8904b9fb99f",
+    "bytes": 10804,
+    "width": 120,
+    "height": 40,
+    "mime": "image/svg+xml"
+  },
+  {
+    "name": "pros-badges-google-play.png",
+    "source": "pros/badges/google-play.png",
+    "sha256": "8b9b6d432832f6a4b09b81321eb8fcf1cf24f487bc584543f6da2ebb33d4005e",
+    "bytes": 7868,
+    "width": 564,
+    "height": 168,
+    "mime": "image/png"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_pros_features",
+  "info": {
+    "displayName": "Feature",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": [
+        "estimates",
+        "choose",
+        "comment"
+      ]
+    },
+    "link": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.link"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "kind": "singleType",
+  "collectionName": "pros_how_it_works_pages",
+  "info": {
+    "singularName": "pros-how-it-works",
+    "pluralName": "pros-how-it-works-pages",
+    "displayName": "Pros — How it works",
+    "description": "Caltrac for Professionals: the How it works page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.seo",
+      "required": true
+    },
+    "intro": {
+      "type": "text",
+      "required": true
+    },
+    "steps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.step-list",
+      "required": true
+    },
+    "can": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.step-list",
+      "required": true
+    },
+    "cannot": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.step-list",
+      "required": true
+    },
+    "connect": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.step-list",
+      "required": true
+    },
+    "sendPage": {
+      "type": "richtext",
+      "required": true
+    },
+    "closingCampaign": {
+      "type": "enumeration",
+      "enum": [
+        "header",
+        "home-hero",
+        "home-closing",
+        "how-it-works-closing",
+        "faq-closing",
+        "login",
+        "trainers-hero",
+        "trainers-closing",
+        "dietitians-hero",
+        "dietitians-closing",
+        "nutritionists-hero",
+        "nutritionists-closing",
+        "blog-coming-soon"
+      ],
+      "required": true
+    }
+  }
+}

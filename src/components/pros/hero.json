@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_pros_heroes",
+  "info": {
+    "displayName": "Hero",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "intro": {
+      "type": "text",
+      "required": true
+    },
+    "apply": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.cta",
+      "required": true
+    },
+    "howItWorks": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.link"
+    },
+    "signIn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "pros.link"
+    }
+  }
+}
