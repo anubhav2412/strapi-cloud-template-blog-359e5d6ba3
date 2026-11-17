@@ -121,7 +121,7 @@ npm run seed:pros
 
 - It seeds each type once. It creates and publishes the type, then records it as seeded in Strapi's core store (key `core_pros-seed_seeded`). A type that is recorded, or that has an entry (draft or published), is skipped whole. Editors' changes are never overwritten, and a type an editor deletes stays deleted. A type that has an entry but no record yet is recorded, which the log line shows under `recorded`.
 - To take a page's content out of the way, unpublish its entry rather than delete it. Unpublishing keeps the draft, so nothing is lost.
-- On Strapi Cloud a deleted pros type stays deleted: the seed record skips it on every start, and Cloud has no shell to re-seed it. Restore it by entering its content again in the admin, from `data/pros/<type>.json`.
+- On Strapi Cloud a deleted pros type stays deleted: the seed record skips it on every start, and Cloud has no shell to re-seed it. Restore it by entering its content again in the admin, from the affiliate site's snapshot: `src/content/pros/<type>.json` in the Caltrac-affiliate repo. The snapshot is the published content as of the site's last release, refreshed by `npm run pros:snapshot`. `data/pros/<type>.json` here is only the day-one content.
 - Locally (SQLite, where you have a shell), a type can be seeded again from `data/pros`: delete its entry, then run:
 
   ```
