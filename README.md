@@ -120,7 +120,9 @@ npm run seed:pros
 ```
 
 - It seeds each type once. It creates and publishes the type, then records it as seeded in Strapi's core store (key `core_pros-seed_seeded`). A type that is recorded, or that has an entry (draft or published), is skipped whole. Editors' changes are never overwritten, and a type an editor deletes stays deleted. A type that has an entry but no record yet is recorded, which the log line shows under `recorded`.
-- To seed a type again from `data/pros`, delete its entry, then run:
+- To take a page's content out of the way, unpublish its entry rather than delete it. Unpublishing keeps the draft, so nothing is lost.
+- On Strapi Cloud a deleted pros type stays deleted: the seed record skips it on every start, and Cloud has no shell to re-seed it. Restore it by entering its content again in the admin, from `data/pros/<type>.json`.
+- Locally (SQLite, where you have a shell), a type can be seeded again from `data/pros`: delete its entry, then run:
 
   ```
   npm run seed:pros -- --reseed pros-blog-landing
@@ -147,7 +149,7 @@ npm run seed:pros
 node --experimental-strip-types scripts/pros-strapi-export.mts <path to this repo>/data/pros
 ```
 
-Commit its output unedited. The seed creates each type only once, so new data reaches a type that is already seeded only when its entry is deleted and re-seeded with `--reseed`, or edited in the admin.
+Commit its output unedited. The seed creates each type only once, so new data reaches a type that is already seeded only when it is edited in the admin, or, locally, when its entry is deleted and re-seeded with `--reseed`.
 
 ### API token for the site
 
