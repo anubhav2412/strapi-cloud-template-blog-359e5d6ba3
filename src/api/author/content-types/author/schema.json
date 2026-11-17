@@ -31,6 +31,12 @@
       "target": "api::article.article",
       "mappedBy": "author"
     },
+    "reviewedArticles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article",
+      "mappedBy": "reviewedBy"
+    },
     "slug": {
       "type": "uid",
       "targetField": "name"

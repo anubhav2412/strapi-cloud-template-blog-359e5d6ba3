@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blog_takeaway_items",
+  "info": {
+    "displayName": "Takeaway",
+    "icon": "arrowRight",
+    "description": "One key takeaway"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

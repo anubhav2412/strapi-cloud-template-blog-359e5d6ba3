@@ -483,7 +483,21 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
   attributes: {
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     blocks: Schema.Attribute.DynamicZone<
-      ['shared.media', 'shared.quote', 'shared.rich-text', 'shared.slider']
+      [
+        'shared.media',
+        'shared.quote',
+        'shared.rich-text',
+        'shared.slider',
+        'blog.image',
+        'blog.gallery',
+        'blog.image-text',
+        'blog.callout',
+        'blog.takeaways',
+        'blog.faq',
+        'blog.video',
+        'blog.cta',
+        'blog.table',
+      ]
     >;
     category: Schema.Attribute.Relation<'manyToOne', 'api::category.category'>;
     cover: Schema.Attribute.Media<'images' | 'files' | 'videos'>;
@@ -501,6 +515,11 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    relatedArticles: Schema.Attribute.Relation<
+      'manyToMany',
+      'api::article.article'
+    >;
+    reviewedBy: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
     seo: Schema.Attribute.Component<'shared.seo', false>;
     site: Schema.Attribute.Enumeration<['caltrac', 'professionals']> &
       Schema.Attribute.Required &
@@ -542,6 +561,10 @@ export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    reviewedArticles: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::article.article'
+    >;
     role: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'>;
     updatedAt: Schema.Attribute.DateTime;

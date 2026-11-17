@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_blog_image_texts",
+  "info": {
+    "displayName": "Image and text",
+    "icon": "landscape",
+    "description": "An image beside a text, the image on the left or the right"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "required": true
+    },
+    "alt": {
+      "type": "string"
+    },
+    "side": {
+      "type": "enumeration",
+      "enum": [
+        "left",
+        "right"
+      ],
+      "default": "left",
+      "required": true
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

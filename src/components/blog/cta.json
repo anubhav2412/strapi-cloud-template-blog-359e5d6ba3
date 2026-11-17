@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blog_ctas",
+  "info": {
+    "displayName": "Call to action",
+    "icon": "cursor",
+    "description": "A button: Apply, the app store badges, or a link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "apply",
+        "install",
+        "link"
+      ],
+      "default": "apply",
+      "required": true
+    },
+    "href": {
+      "type": "string"
+    },
+    "campaign": {
+      "type": "string"
+    }
+  }
+}

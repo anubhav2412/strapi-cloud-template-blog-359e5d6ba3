@@ -43,7 +43,21 @@
     },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "shared.media",
+        "shared.quote",
+        "shared.rich-text",
+        "shared.slider",
+        "blog.image",
+        "blog.gallery",
+        "blog.image-text",
+        "blog.callout",
+        "blog.takeaways",
+        "blog.faq",
+        "blog.video",
+        "blog.cta",
+        "blog.table"
+      ]
     },
     "seo": {
       "type": "component",
@@ -55,6 +69,17 @@
       "enum": ["caltrac", "professionals"],
       "required": true,
       "default": "caltrac"
+    },
+    "reviewedBy": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author",
+      "inversedBy": "reviewedArticles"
+    },
+    "relatedArticles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article"
     }
   }
 }
