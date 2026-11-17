@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_blog_callouts",
+  "info": {
+    "displayName": "Callout",
+    "icon": "information",
+    "description": "A highlighted tip, note or warning"
+  },
+  "options": {},
+  "attributes": {
+    "kind": {
+      "type": "enumeration",
+      "enum": [
+        "tip",
+        "note",
+        "warning"
+      ],
+      "default": "note",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

@@ -21,6 +21,13 @@
       "multiple": false,
       "required": false,
       "allowedTypes": ["images"]
+    },
+    "canonicalUrl": {
+      "type": "string"
+    },
+    "noindex": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

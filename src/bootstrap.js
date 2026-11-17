@@ -272,6 +272,17 @@ async function main() {
 module.exports = async () => {
   await seedExampleApp();
 
+  // Rows that predate the professionals blog's fields get their values, after
+  // the template's seed (a new database's first rows) and before the pros
+  // seed. A failure is logged and never stops Strapi from starting; the next
+  // start tries again.
+  try {
+    const { backfillProsBlog } = require('./pros-blog/backfill');
+    await backfillProsBlog(strapi);
+  } catch (error) {
+    strapi.log.error(`[pros-blog-backfill] did not complete; Strapi starts without it. ${error.stack ?? error}`);
+  }
+
   // The Caltrac for Professionals seed creates each pros type once, and never
   // again after an editor changes or deletes it. A failure is logged and never
   // stops Strapi from starting, so the require sits inside the try as well.

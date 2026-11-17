@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blog_tables",
+  "info": {
+    "displayName": "Table",
+    "icon": "stack",
+    "description": "A table written as CSV"
+  },
+  "options": {},
+  "attributes": {
+    "csv": {
+      "type": "text",
+      "required": true
+    },
+    "caption": {
+      "type": "string"
+    },
+    "headerRow": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

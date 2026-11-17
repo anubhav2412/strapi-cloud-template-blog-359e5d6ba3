@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blog_gallery_items",
+  "info": {
+    "displayName": "Gallery item",
+    "icon": "picture",
+    "description": "An image in a gallery, with its alt text for this use"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "required": true
+    },
+    "alt": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    }
+  }
+}

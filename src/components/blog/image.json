@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_blog_images",
+  "info": {
+    "displayName": "Image",
+    "icon": "picture",
+    "description": "One image with its alt text for this use; an empty alt marks it decorative"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ],
+      "required": true
+    },
+    "alt": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "credit": {
+      "type": "string"
+    },
+    "layout": {
+      "type": "enumeration",
+      "enum": [
+        "inline",
+        "wide",
+        "full"
+      ],
+      "default": "inline",
+      "required": true
+    }
+  }
+}

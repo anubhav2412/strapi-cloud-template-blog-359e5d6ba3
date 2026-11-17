@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blog_takeaways",
+  "info": {
+    "displayName": "Key takeaways",
+    "icon": "bulletList",
+    "description": "A short list of the article's key points"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Key takeaways"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blog.takeaway",
+      "required": true,
+      "min": 1
+    }
+  }
+}

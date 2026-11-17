@@ -1,0 +1,125 @@
+{
+  "title": "Sample article — do not publish",
+  "slug": "sample-article-do-not-publish",
+  "site": "professionals",
+  "description": "A sample that uses every block of the professionals blog. It stays a draft: copy what you need, and never publish it.",
+  "cover": "pros-caltrac-hero-subject.png",
+  "seo": {
+    "metaTitle": "Sample article — do not publish",
+    "metaDescription": "A sample that uses every block of the professionals blog. It stays a draft and is never published.",
+    "shareImage": "pros-caltrac-hero-subject.png",
+    "noindex": true
+  },
+  "blocks": [
+    {
+      "__component": "blog.takeaways",
+      "title": "Key takeaways",
+      "items": [
+        { "text": "This article is a sample. It shows every block the professionals blog has." },
+        { "text": "It stays a draft. Duplicate it, or copy its blocks, to start a real article." },
+        { "text": "Every image block holds its own alt text, written for this use." }
+      ]
+    },
+    {
+      "__component": "shared.rich-text",
+      "body": "This sample shows how each block looks on the professionals blog. The text is placeholder copy about the app, not advice.\n\n## Rich text\n\nA rich text block holds Markdown: **bold**, *italic*, [links](https://affiliate.caltrac.ai/how-it-works) and lists.\n\n- A first point\n- A second point\n\n### A smaller heading\n\nHeadings of level 2 and 3 make the article's table of contents."
+    },
+    {
+      "__component": "blog.image",
+      "image": "pros-meal-logged.jpg",
+      "alt": "A meal logged from a photo in the Caltrac app, showing the foods found before saving",
+      "caption": "An image block, inline: the width of the text.",
+      "credit": "Caltrac",
+      "layout": "inline"
+    },
+    {
+      "__component": "blog.image-text",
+      "image": "pros-proof-meals.png",
+      "alt": "A professional's view of a client's meals in Caltrac for Professionals",
+      "side": "right",
+      "body": "An image and text block puts a picture beside a short text. Here the image is on the right.\n\nThe text is Markdown, like a rich text block."
+    },
+    {
+      "__component": "blog.callout",
+      "kind": "tip",
+      "title": "A tip",
+      "body": "A callout highlights one short point. Its kind is a tip, a note or a warning."
+    },
+    {
+      "__component": "blog.gallery",
+      "layout": "grid",
+      "items": [
+        {
+          "image": "pros-proof-meals.png",
+          "alt": "A professional's view of a client's meals in Caltrac for Professionals",
+          "caption": "A client's meals"
+        },
+        {
+          "image": "pros-proof-comment.png",
+          "alt": "A professional's comment on a client's meal",
+          "caption": "A comment on a meal"
+        },
+        {
+          "image": "pros-proof-code.png",
+          "alt": "A client entering a professional's linking code in Caltrac Connect",
+          "caption": "Entering a linking code"
+        }
+      ]
+    },
+    {
+      "__component": "shared.quote",
+      "title": "A sample quote",
+      "body": "A quote block sets a sentence apart, with the name of the person who said it as its title."
+    },
+    {
+      "__component": "shared.media",
+      "file": "pros-get-started.png"
+    },
+    {
+      "__component": "shared.slider",
+      "files": ["pros-proof-meals.png", "pros-proof-comment.png"]
+    },
+    {
+      "__component": "blog.video",
+      "url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
+      "title": "Big Buck Bunny, a sample video",
+      "caption": "A video block plays a YouTube or Vimeo video. This one is Big Buck Bunny (Blender Foundation, CC BY 3.0), used as a sample."
+    },
+    {
+      "__component": "blog.table",
+      "caption": "A table block, written as CSV",
+      "headerRow": true,
+      "csv": "Block,What it is for\nRich text,\"Paragraphs, headings, lists and links\"\nImage,One picture with its alt text\nImage and text,A picture beside a short text\nTable,Rows and columns like these"
+    },
+    {
+      "__component": "blog.faq",
+      "items": [
+        {
+          "question": "What is this article?",
+          "answer": "A sample that shows every block of the professionals blog. It stays a draft."
+        },
+        {
+          "question": "Where do the questions go?",
+          "answer": "On the page, and in the page's FAQ structured data."
+        }
+      ]
+    },
+    {
+      "__component": "blog.cta",
+      "label": "Apply to join",
+      "kind": "apply",
+      "campaign": "blog-sample"
+    },
+    {
+      "__component": "blog.cta",
+      "label": "Get the app",
+      "kind": "install"
+    },
+    {
+      "__component": "blog.cta",
+      "label": "See how it works",
+      "kind": "link",
+      "href": "/how-it-works"
+    }
+  ]
+}
