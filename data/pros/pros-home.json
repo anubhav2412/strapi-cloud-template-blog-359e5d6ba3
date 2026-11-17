@@ -1,0 +1,112 @@
+{
+  "seo": {
+    "title": "Free Client Food Diary for Dietitians and Trainers | Caltrac",
+    "description": "Free for dietitians, nutritionists and trainers: see the meals your clients choose to share, from photo or text logs, and comment on them.",
+    "h1": "Review your clients' meals, from their own photo or text logs",
+    "indexable": true,
+    "updated": "2026-11-17"
+  },
+  "hero": {
+    "intro": "Caltrac for Professionals is a free way for dietitians, nutritionists and trainers to see the meals their clients choose to share, and comment on them. Clients log with a photo or a short description, and stay in control of what you see.",
+    "apply": {
+      "label": "Apply to join",
+      "campaign": "home-hero"
+    },
+    "howItWorks": {
+      "label": "See how it works",
+      "href": "/how-it-works"
+    },
+    "signIn": {
+      "label": "Already approved? Sign in",
+      "href": "/login"
+    }
+  },
+  "heroImage": {
+    "image": "pros-caltrac-hero-subject.png",
+    "alt": "The Caltrac mascot holding a phone and a bowl of salad, in front of the Caltrac app's calorie and macro screen"
+  },
+  "canDo": {
+    "heading": "What you can do",
+    "items": [
+      {
+        "title": "See the meals your clients log.",
+        "text": "{{accessWording}}"
+      },
+      {
+        "title": "Comment on the meal itself.",
+        "text": "Your client reads your comment in the Caltrac app, next to the food."
+      },
+      {
+        "title": "Give clients your linking code.",
+        "text": "After approval you get a code. Clients enter it themselves in Caltrac Connect, from the button in the app's top bar, and send you a request. Access starts when you accept it."
+      },
+      {
+        "title": "Keep clients in control.",
+        "text": "Access starts when a client grants it and ends the moment they stop sharing."
+      }
+    ]
+  },
+  "who": {
+    "heading": "Who it's for",
+    "items": [
+      {
+        "title": "Dietitians",
+        "text": "follow what clients ate between appointments.",
+        "link": {
+          "label": "For dietitians",
+          "href": "/for-dietitians"
+        }
+      },
+      {
+        "title": "Nutritionists",
+        "text": "start reviews from the food, not from data entry.",
+        "link": {
+          "label": "For nutritionists",
+          "href": "/for-nutritionists"
+        }
+      },
+      {
+        "title": "Trainers",
+        "text": "see what clients eat between sessions.",
+        "link": {
+          "label": "For personal trainers",
+          "href": "/for-personal-trainers"
+        }
+      }
+    ]
+  },
+  "loggingHeading": "How a meal gets logged",
+  "loggingScreenshot": {
+    "image": "pros-meal-logged.jpg",
+    "alt": "A meal logged from a photo in the Caltrac app, showing the foods found before saving"
+  },
+  "loggingText": "Your client logs a meal with a photo or a short description. Caltrac estimates the calories and macros (protein, carbs and fat), and the client can edit the foods and serving sizes before saving. These are estimates, not exact measurements, so use them as a starting point for conversation.",
+  "stepsLink": {
+    "label": "Read the full steps",
+    "href": "/how-it-works"
+  },
+  "questions": {
+    "heading": "Common questions",
+    "items": [
+      {
+        "question": "Does it cost anything?",
+        "answer": "Joining and using Caltrac for Professionals is free."
+      },
+      {
+        "question": "How long does review take?",
+        "answer": "A person at Caltrac reads every application. The review is manual, and you receive the outcome by email within 24–48 hours."
+      },
+      {
+        "question": "Can a client stop sharing?",
+        "answer": "Yes, at any time. They don't need approval from you or from Caltrac, and it takes effect immediately."
+      }
+    ]
+  },
+  "questionsHref": "/faq",
+  "allQuestionsLink": {
+    "label": "All questions",
+    "href": "/faq"
+  },
+  "applyPage": "The application form is on [caltrac.ai/for-professionals](https://caltrac.ai/for-professionals).",
+  "closingCampaign": "home-closing"
+}

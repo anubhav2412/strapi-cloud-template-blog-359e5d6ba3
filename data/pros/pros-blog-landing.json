@@ -1,0 +1,18 @@
+{
+  "seo": {
+    "title": "Food Diary Guides for Professionals | Caltrac Blog",
+    "description": "Guides for dietitians, nutritionists and trainers are coming soon.",
+    "h1": "Guides for dietitians, nutritionists and trainers",
+    "indexable": false,
+    "breadcrumb": "Blog"
+  },
+  "comingSoonLine": "Guides for dietitians, nutritionists and trainers are coming soon.",
+  "apply": {
+    "label": "Apply to join",
+    "campaign": "blog-coming-soon"
+  },
+  "mascot": {
+    "image": "pros-get-started.png",
+    "alt": "The Caltrac mascot waving, with a speech bubble saying Let's get started!"
+  }
+}

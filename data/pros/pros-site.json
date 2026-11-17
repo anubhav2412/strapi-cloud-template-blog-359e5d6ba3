@@ -1,0 +1,193 @@
+{
+  "siteName": "Caltrac for Professionals",
+  "companyName": "CALTRACAI CORP",
+  "supportEmail": "support@caltrac.ai",
+  "legalEmail": "legal@caltrac.ai",
+  "caltracUrl": "https://caltrac.ai",
+  "applyPageUrl": "https://caltrac.ai/for-professionals",
+  "applyUtmSource": "pros-site",
+  "applyUtmMedium": "cta",
+  "wordmark": "Caltrac",
+  "qualifier": "for Professionals",
+  "logo": {
+    "image": "pros-logo-mark.png",
+    "alt": ""
+  },
+  "applyLabel": "Apply to join",
+  "howItWorksLabel": "See how it works",
+  "updatedLabel": "Last updated",
+  "homeLink": {
+    "label": "Home",
+    "href": "/"
+  },
+  "professionalsLabel": "For professionals",
+  "professionals": [
+    {
+      "label": "Trainers",
+      "href": "/for-personal-trainers"
+    },
+    {
+      "label": "Dietitians",
+      "href": "/for-dietitians"
+    },
+    {
+      "label": "Nutritionists",
+      "href": "/for-nutritionists"
+    }
+  ],
+  "headerLinks": [
+    {
+      "label": "How it works",
+      "href": "/how-it-works"
+    },
+    {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
+    }
+  ],
+  "headerApply": {
+    "label": "Apply",
+    "campaign": "header"
+  },
+  "signIn": {
+    "label": "Sign in",
+    "href": "/login"
+  },
+  "footerLinks": [
+    {
+      "label": "caltrac.ai",
+      "href": "https://caltrac.ai"
+    },
+    {
+      "label": "Privacy",
+      "href": "/privacy"
+    },
+    {
+      "label": "Terms",
+      "href": "/terms"
+    },
+    {
+      "label": "How your clients connect",
+      "href": "/how-your-clients-connect"
+    },
+    {
+      "label": "Contact",
+      "href": "mailto:support@caltrac.ai"
+    },
+    {
+      "label": "legal@caltrac.ai",
+      "href": "mailto:legal@caltrac.ai"
+    }
+  ],
+  "footerAppHeading": "Get the Caltrac app",
+  "descriptor": "Caltrac AI ([caltrac.ai](https://caltrac.ai)), the AI calorie and macro tracker.",
+  "storeBadges": [
+    {
+      "store": "ios",
+      "label": "App Store",
+      "alt": "Download on the App Store",
+      "image": "pros-badges-app-store.svg",
+      "width": 120,
+      "height": 40,
+      "listingUrl": "https://apps.apple.com/us/app/caltrac-ai/id6788988687",
+      "badgeUrl": "https://apps.apple.com/us/app/caltrac-ai/id6788988687?itscg=30200&itsct=apps_box_badge"
+    },
+    {
+      "store": "android",
+      "label": "Google Play",
+      "alt": "Get it on Google Play",
+      "image": "pros-badges-google-play.png",
+      "width": 564,
+      "height": 168,
+      "listingUrl": "https://play.google.com/store/apps/details?id=ai.caltrac.app",
+      "badgeUrl": "https://play.google.com/store/apps/details?id=ai.caltrac.app"
+    }
+  ],
+  "organizationContactType": "customer support",
+  "keyFactsCaption": "Key facts",
+  "keyFacts": [
+    {
+      "label": "Cost",
+      "value": "Free to join."
+    },
+    {
+      "label": "Review",
+      "value": "A person at Caltrac reviews every application within 24–48 hours."
+    },
+    {
+      "label": "How clients log",
+      "value": "A photo or a short description. Calories and macros are estimates that clients can edit."
+    },
+    {
+      "label": "How clients share",
+      "value": "Clients enter your code in Caltrac Connect and send a request; access starts when you accept it."
+    },
+    {
+      "label": "What you see",
+      "value": "{{accessWording}} You can comment on meals."
+    },
+    {
+      "label": "Who controls access",
+      "value": "The client, who can stop sharing at any time."
+    },
+    {
+      "label": "Apps",
+      "value": "iPhone (iOS 17 or later) and Android (Android 14 or later)."
+    }
+  ],
+  "focus": {
+    "heading": "What it focuses on",
+    "body": "Caltrac for Professionals focuses on one job: seeing the meals clients choose to share, and commenting on them."
+  },
+  "clientControl": {
+    "heading": "Clients stay in control of their meals",
+    "body": "You see a client's meals only after they enter your linking code and grant access. {{accessWording}} You can comment on meals. Clients can stop sharing at any time, without asking anyone, and it takes effect immediately. You can't search for, invite or add a client. Every link starts with them."
+  },
+  "fourSteps": {
+    "heading": "Four steps to join",
+    "steps": [
+      {
+        "text": "Apply with your name and email."
+      },
+      {
+        "text": "A person at Caltrac reviews your application."
+      },
+      {
+        "text": "If approved, you get your account and linking code."
+      },
+      {
+        "text": "Your clients enter your code in Caltrac Connect and send a request; access starts when you accept it."
+      }
+    ]
+  },
+  "scope": {
+    "heading": "A note on scope",
+    "body": "Caltrac shows what clients choose to log. It doesn't give medical advice, and calorie and macro figures are estimates. Use your own professional judgment and work within your qualifications."
+  },
+  "proofScreenshots": [
+    {
+      "image": "pros-proof-meals.png",
+      "alt": "A professional's view of a client's meals in Caltrac for Professionals"
+    },
+    {
+      "image": "pros-proof-comment.png",
+      "alt": "A professional's comment on a client's meal"
+    },
+    {
+      "image": "pros-proof-code.png",
+      "alt": "A client entering a professional's linking code in Caltrac Connect"
+    }
+  ],
+  "proofCompanyHeading": "Who is behind Caltrac",
+  "proofCompanyLabel": "Company",
+  "proofContactLabel": "Contact",
+  "closingHeading": "Ready to see your clients' meals?",
+  "closingText": "Apply to join. It's free, and a person at Caltrac reads every application.",
+  "closingButton": "Apply to join",
+  "hipaaClause": "Caltrac AI is not a “covered entity” or “business associate” under HIPAA, and the health information you provide is not protected health information subject to HIPAA.",
+  "accessWording": "Access covers the meals your client logs, their nutrition goals and how their net calories compare with those goals."
+}

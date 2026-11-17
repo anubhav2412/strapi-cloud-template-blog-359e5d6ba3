@@ -1,0 +1,65 @@
+{
+  "seo": {
+    "title": "Share Your Food Log With Your Dietitian | Caltrac",
+    "description": "Install Caltrac on iPhone or Android, enter your professional's code and send a request to share your meals. Stop sharing any time.",
+    "h1": "How to share your meals with your dietitian, nutritionist or trainer",
+    "indexable": true,
+    "updated": "2026-11-17",
+    "breadcrumb": "How your clients connect"
+  },
+  "intro": {
+    "body": "To share your meals, install Caltrac, enter the linking code your professional gave you in Caltrac Connect, and send a request. Once your professional accepts it, they can see the meals you log and comment on them. You can stop sharing at any time."
+  },
+  "connect": {
+    "heading": "What is Caltrac Connect?",
+    "body": "Caltrac Connect is an optional feature in the Caltrac app, opened from the button in the app's top bar. It lets you connect with a nutritionist, dietitian or trainer, who can then view your meals and leave comments. You control access and can revoke it at any time."
+  },
+  "before": {
+    "heading": "Before you start",
+    "body": "You need the Caltrac app and your professional's linking code. Professionals receive their code after Caltrac approves their account."
+  },
+  "canSee": {
+    "heading": "What your professional can see",
+    "body": "Your meals, your nutrition goals and how your net calories compare with those goals. They can also comment on your meals. They see these only after they accept your request."
+  },
+  "cannot": {
+    "heading": "What they can't do",
+    "body": "They can't search for you, invite you or add you. Every link starts with you."
+  },
+  "stopping": {
+    "heading": "Stopping sharing",
+    "body": "You can stop sharing at any time. You don't need anyone's approval, and it takes effect immediately.\n\nOpen Caltrac Connect, tap your professional, then Revoke access, and confirm.\n\nOn Android, a request that is still pending can be withdrawn: tap it, then Withdraw request."
+  },
+  "steps": {
+    "heading": "Four steps",
+    "steps": [
+      {
+        "text": "Install Caltrac on iPhone or Android.",
+        "storeBadges": true
+      },
+      {
+        "text": "Tap Caltrac Connect in the app's top bar, choose Connect a professional, and enter your professional's linking code."
+      },
+      {
+        "text": "Send the request. Sharing starts when your professional accepts."
+      },
+      {
+        "text": "Log your meals with a photo or a short description. Their comments appear next to the meals."
+      }
+    ]
+  },
+  "faq": {
+    "heading": "Questions",
+    "items": [
+      {
+        "question": "My professional doesn't have a code yet.",
+        "answer": "They can apply to join at the [Caltrac for Professionals Home page](/). Once approved, they'll receive a code."
+      },
+      {
+        "question": "Is Caltrac free?",
+        "answer": "Caltrac is free to use, with no subscriptions."
+      }
+    ]
+  },
+  "installHeading": "Install Caltrac"
+}

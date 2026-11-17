@@ -1,0 +1,82 @@
+{
+  "seo": {
+    "title": "How Client-Controlled Food Log Sharing Works | Caltrac",
+    "description": "Apply, get your linking code, and review meals your clients choose to share. Clients control access and can stop sharing at any time.",
+    "h1": "How Caltrac for Professionals works",
+    "indexable": true,
+    "updated": "2026-11-17",
+    "breadcrumb": "How it works"
+  },
+  "intro": "Joining takes four steps. You apply, a person at Caltrac reviews your application, we set up your account and give you a linking code, and your clients enter that code in Caltrac Connect and send a request; access starts when you accept it. Clients can stop sharing at any time.",
+  "steps": {
+    "steps": [
+      {
+        "heading": "Step 1. Apply",
+        "text": "Fill in the application form. Only your name and email are required. The other details just give the review more to go on."
+      },
+      {
+        "heading": "Step 2. We review",
+        "text": "A person at Caltrac reads every application. The review is manual, and you get the outcome by email within 24–48 hours."
+      },
+      {
+        "heading": "Step 3. We set up your account",
+        "text": "If you are approved, we create your account, email you the details and give you your linking code. Nothing is created before approval."
+      },
+      {
+        "heading": "Step 4. Your clients connect with your code",
+        "text": "Each client enters your code in Caltrac Connect and sends you a request. Access starts when you accept it. From then on you can review the meals they share and comment on them."
+      }
+    ]
+  },
+  "can": {
+    "heading": "What a professional can do",
+    "steps": [
+      {
+        "text": "See what linked clients share: their meals (photo, food, estimated calories and macros), their nutrition goals and how their net calories compare with those goals."
+      },
+      {
+        "text": "Comment on a specific meal. The client reads it in the app, next to the food."
+      },
+      {
+        "text": "Give clients the linking code."
+      },
+      {
+        "text": "Accept or decline a client's request."
+      }
+    ]
+  },
+  "cannot": {
+    "heading": "What a professional cannot do",
+    "steps": [
+      {
+        "text": "Search for, invite or add a client."
+      },
+      {
+        "text": "See a client's meals before the client grants access."
+      },
+      {
+        "text": "Keep access after a client stops sharing."
+      }
+    ]
+  },
+  "connect": {
+    "heading": "How clients connect",
+    "steps": [
+      {
+        "text": "Install Caltrac on iPhone or Android.",
+        "storeBadges": true
+      },
+      {
+        "text": "Tap Caltrac Connect in the app's top bar, choose Connect a professional, and enter your professional's linking code."
+      },
+      {
+        "text": "Send the request."
+      },
+      {
+        "text": "Access starts when your professional accepts. Log meals as usual; their comments appear next to the meals."
+      }
+    ]
+  },
+  "sendPage": "Send your clients this page: [How your clients connect](/how-your-clients-connect).",
+  "closingCampaign": "how-it-works-closing"
+}
