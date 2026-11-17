@@ -1,5 +1,6 @@
 'use strict';
 const bootstrap = require("./bootstrap");
+const { createArticleSiteGuard } = require('./pros-blog/article-site-guard');
 
 module.exports = {
   /**
@@ -8,7 +9,11 @@ module.exports = {
    *
    * This gives you an opportunity to extend code.
    */
-  register(/*{ strapi }*/) {},
+  register({ strapi }) {
+    // Keeps an article's blocks and category on the article's site (caltrac.ai
+    // or the professionals blog), for the admin, the REST API and server code.
+    strapi.documents.use(createArticleSiteGuard(strapi));
+  },
 
   /**
    * An asynchronous bootstrap function that runs before

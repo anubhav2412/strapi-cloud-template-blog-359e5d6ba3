@@ -10,7 +10,8 @@
     "seed:example": "node ./scripts/seed.js",
     "seed:pros": "node ./scripts/seed-pros.js",
     "start": "strapi start",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "test": "node --test \"tests/**/*.test.js\""
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.47.1",
