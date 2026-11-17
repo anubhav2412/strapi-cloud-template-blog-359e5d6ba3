@@ -234,7 +234,7 @@ The site reads the pros types with a read-only token. It is created in the admin
 - Permissions: `find` on each `pros-*` single type (single types have no `findOne`); for the blog, `find` and `findOne` on Article, Category and Author; and under Upload, `find` and `findOne`.
 - The Public role is unchanged, so the pros types are not readable without the token.
 - `find` also returns a type's draft when a request asks for `status=draft`. Without it, the response is the published version.
-- Drafts need an API token. The Public role reads articles and categories, but a request without a token is served the published version only: a `status` other than `published` (`?status=draft`, for example) gets a 403 (`src/policies/published-only-without-token.js`). Requests with a token, the sites' and the backend's, are unchanged.
+- Drafts need an API token. Without a token, every content type's `find` and `findOne` serve the published version only: a `status` other than `published` (`?status=draft`, for example) gets a 403. The policy is `src/policies/published-only-without-token.js`, and `src/pros-blog/read-routes.js` puts it on every route at start-up. The Public role is unchanged, and requests with a token, the sites' and the backend's, are unchanged.
 
 ### Webhook for the site
 

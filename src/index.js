@@ -1,6 +1,7 @@
 'use strict';
 const bootstrap = require("./bootstrap");
 const { createArticleSiteGuard } = require('./pros-blog/article-site-guard');
+const { applyPublishedOnlyToReadRoutes } = require('./pros-blog/read-routes');
 
 module.exports = {
   /**
@@ -13,6 +14,11 @@ module.exports = {
     // Keeps an article's blocks and category on the article's site (caltrac.ai
     // or the professionals blog), for the admin, the REST API and server code.
     strapi.documents.use(createArticleSiteGuard(strapi));
+
+    // Without an API token, every content type's find and findOne serve only
+    // the published version.
+    const readRoutes = applyPublishedOnlyToReadRoutes(strapi);
+    strapi.log.info(`[published-only] ${readRoutes} read routes need an API token for drafts`);
   },
 
   /**
