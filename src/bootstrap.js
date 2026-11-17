@@ -272,9 +272,9 @@ async function main() {
 module.exports = async () => {
   await seedExampleApp();
 
-  // The Caltrac for Professionals seed creates only the pros types that have no
-  // document yet. A failure is logged and never stops Strapi from starting, so
-  // the require sits inside the try as well.
+  // The Caltrac for Professionals seed creates each pros type once, and never
+  // again after an editor changes or deletes it. A failure is logged and never
+  // stops Strapi from starting, so the require sits inside the try as well.
   try {
     const { seedPros } = require('../scripts/seed-pros');
     await seedPros(strapi);

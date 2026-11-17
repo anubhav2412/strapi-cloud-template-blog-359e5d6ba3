@@ -119,17 +119,25 @@ PATH=/opt/homebrew/opt/node@22/bin:$PATH npm run develop
 npm run seed:pros
 ```
 
-- It creates and publishes only the types that have no entry yet. A type that has one, draft or published, is skipped whole, so editors' changes are never overwritten. To re-seed a type, delete its entry and restart, or run `npm run seed:pros`.
+- It seeds each type once. It creates and publishes the type, then records it as seeded in Strapi's core store (key `core_pros-seed_seeded`). A type that is recorded, or that has an entry (draft or published), is skipped whole. Editors' changes are never overwritten, and a type an editor deletes stays deleted. A type that has an entry but no record yet is recorded, which the log line shows under `recorded`.
+- To seed a type again from `data/pros`, delete its entry, then run:
+
+  ```
+  npm run seed:pros -- --reseed pros-blog-landing
+  ```
+
+  `--reseed` can be repeated. It creates a type only when the type has no entry. A type that still has one is skipped.
+- A run holds a lock until it ends, so two runs at once cannot both create a type: on Postgres (Strapi Cloud) the second run waits; on SQLite it waits up to 5 seconds, then fails without writing anything. MySQL takes no lock.
 - Media fields in the JSON hold an image's file name from `data/pros/manifest.json`. A media library file with that name and byte size is reused. Otherwise the image is uploaded from `data/pros/uploads/`, byte for byte, after its sha256 is checked against the manifest.
 - The text keeps the `{{accessWording}}`, `{{hipaaClause}}` and `{{focus}}` tokens.
 - It creates no permissions. The Public role is unchanged.
 - Each run logs one line, for example:
 
   ```
-  [pros-seed] {"created":[],"skipped":["pros-site","pros-home",...],"uploaded":[],"reused":[]}
+  [pros-seed] {"created":[],"skipped":["pros-site","pros-home",...],"recorded":[],"uploaded":[],"reused":[]}
   ```
 
-  An error is logged, and never stops Strapi from starting.
+  An error is logged, the run's changes are rolled back, and Strapi still starts.
 
 ### Regenerating `data/pros`
 
@@ -139,7 +147,7 @@ npm run seed:pros
 node --experimental-strip-types scripts/pros-strapi-export.mts <path to this repo>/data/pros
 ```
 
-Commit its output unedited. The seed only creates missing types, so new data reaches a type that already has an entry only when that entry is deleted and re-seeded, or edited in the admin.
+Commit its output unedited. The seed creates each type only once, so new data reaches a type that is already seeded only when its entry is deleted and re-seeded with `--reseed`, or edited in the admin.
 
 ### API token for the site
 
