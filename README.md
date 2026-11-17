@@ -141,15 +141,11 @@ npm run seed:pros
 
   An error is logged, the run's changes are rolled back, and Strapi still starts.
 
-### Regenerating `data/pros`
+### `data/pros` is the day-one seed
 
-`data/pros/` is written by the Caltrac-affiliate repo's generator, from the site's own copy. From a Caltrac-affiliate checkout that has `scripts/pros-strapi-export.mts` (`release/pros-site`), with that repo's Node:
+`data/pros/` holds the content the pros types were seeded with on day one, taken from the affiliate site's copy at that time. It seeded each type once. It is not regenerated, and it is not edited.
 
-```
-node --experimental-strip-types scripts/pros-strapi-export.mts <path to this repo>/data/pros
-```
-
-Commit its output unedited. The seed creates each type only once, so new data reaches a type that is already seeded only when it is edited in the admin, or, locally, when its entry is deleted and re-seeded with `--reseed`.
+Once the site is live, the published content in this Strapi is the source of truth: content changes are made in the admin. The affiliate site keeps a committed fallback snapshot of that published content. It is refreshed with `npm run pros:snapshot` in the Caltrac-affiliate repo, run with `STRAPI_API_URL` and a read-only `STRAPI_PROS_TOKEN`.
 
 ### API token for the site
 
