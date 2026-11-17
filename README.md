@@ -243,7 +243,8 @@ Settings → Webhooks → Create new webhook, a second one next to caltrac.ai's:
 - Name: `Caltrac for Professionals`
 - URL: `https://affiliate.caltrac.ai/api/revalidate`
 - Header: `x-revalidate-secret`, set to the site's revalidation secret
-- Events: Entry publish, unpublish and update; Media update
+- Events: Entry create, update, delete, publish and unpublish; Media update
+- Create and delete are needed because categories and authors have no publish step: adding or deleting one sends only Entry create or Entry delete.
 
 The route and the secret are part of the site. Both webhooks fire on every edit, so a pros edit also revalidates caltrac.ai's cache, and the reverse. That is harmless.
 
