@@ -1,7 +1,8 @@
 'use strict';
 
 /**
- * Seeds the Caltrac for Professionals single types from data/pros.
+ * Seeds the Caltrac for Professionals single types from data/pros, then the
+ * professionals blog's category and its sample article.
  *
  * Each pros single type is seeded once: it is created from
  * data/pros/<type>.json and published, then recorded as seeded in Strapi's core
@@ -10,6 +11,13 @@
  * editor deleted stays deleted. A type that has a document but no record yet is
  * recorded. `npm run seed:pros -- --reseed <type>` seeds a recorded type again
  * when it has no document.
+ *
+ * The blog's two items follow the same rules under their own keys in the same
+ * record: `blog-category`, the "Professionals" category (data/pros/blog-category.json),
+ * and `blog-sample`, an article that uses every block (data/pros/blog-sample.json).
+ * Each counts as present when a category or article with its slug exists. The
+ * sample is created as a draft and never published; it goes in the
+ * professionals category when one with that slug exists.
  *
  * Media fields in the JSON hold an upload's file name from data/pros/manifest.json.
  * Each name resolves to a media library file: an existing file with that name and
@@ -42,16 +50,30 @@ const SINGLE_TYPES = [
   'pros-blog-landing',
 ];
 
+const CATEGORY_UID = 'api::category.category';
+const ARTICLE_UID = 'api::article.article';
+
+// Everything the seed creates, in order: the pros single types (any document
+// counts as present), then the blog's category and its sample article (a
+// document with the item's slug counts as present). The sample comes after the
+// category it goes in.
+const SEED_ITEMS = [
+  ...SINGLE_TYPES.map((type) => ({ key: type, uid: `api::${type}.${type}`, status: 'published' })),
+  { key: 'blog-category', uid: CATEGORY_UID, bySlug: true },
+  { key: 'blog-sample', uid: ARTICLE_UID, bySlug: true, status: 'draft', inBlogCategory: true },
+];
+const SEED_KEYS = SEED_ITEMS.map((item) => item.key);
+
 const FILE_UID = 'plugin::upload.file';
 
-// The core store entry listing the types already seeded (key core_pros-seed_seeded).
+// The core store entry listing the items already seeded (key core_pros-seed_seeded).
 const SEEDED = { type: 'core', name: 'pros-seed', key: 'seeded' };
 
 const readJson = (fileName) => JSON.parse(fs.readFileSync(path.join(DATA_DIR, fileName), 'utf8'));
 
 /**
  * Returns a copy of `data` with every media value passed through `map`,
- * following the model's attributes into nested components.
+ * following the model's attributes into nested components and dynamic zones.
  */
 function mapMedia(strapi, attributes, data, map) {
   const out = {};
@@ -66,6 +88,14 @@ function mapMedia(strapi, attributes, data, map) {
       const componentAttributes = strapi.components[attribute.component].attributes;
       const mapOne = (item) => mapMedia(strapi, componentAttributes, item, map);
       out[key] = attribute.repeatable ? value.map(mapOne) : mapOne(value);
+    } else if (attribute.type === 'dynamiczone') {
+      out[key] = value.map(({ __component, ...item }) => {
+        const component = strapi.components[__component];
+        if (!component || !attribute.components.includes(__component)) {
+          throw new Error(`"${__component}" is not a component of "${key}"`);
+        }
+        return { __component, ...mapMedia(strapi, component.attributes, item, map) };
+      });
     } else {
       out[key] = value;
     }
@@ -195,25 +225,25 @@ async function seed(strapi, { reseed = [] } = {}) {
         }
       };
 
-      for (const type of SINGLE_TYPES) {
-        current = type;
-        const uid = `api::${type}.${type}`;
+      for (const { key, uid, bySlug, status, inBlogCategory } of SEED_ITEMS) {
+        current = key;
         const model = strapi.contentTypes[uid];
         if (!model) {
           throw new Error(`${uid} is not a content type`);
         }
-        // Any row, draft or published, means the type has a document.
-        const hasDocument = (await strapi.db.query(uid).count()) > 0;
-        if (hasDocument || (seeded.has(type) && !reseed.includes(type))) {
-          if (!seeded.has(type)) {
-            seeded.add(type);
-            result.recorded.push(type);
+        const data = readJson(`${key}.json`);
+        // Any row, draft or published, means the item has a document.
+        const where = bySlug ? { slug: data.slug } : {};
+        const hasDocument = (await strapi.db.query(uid).count({ where })) > 0;
+        if (hasDocument || (seeded.has(key) && !reseed.includes(key))) {
+          if (!seeded.has(key)) {
+            seeded.add(key);
+            result.recorded.push(key);
           }
-          result.skipped.push(type);
+          result.skipped.push(key);
           continue;
         }
 
-        const data = readJson(`${type}.json`);
         const names = [];
         mapMedia(strapi, model.attributes, data, (name) => {
           names.push(name);
@@ -223,12 +253,21 @@ async function seed(strapi, { reseed = [] } = {}) {
           await resolveFile(name);
         }
 
-        await strapi.documents(uid).create({
-          data: mapMedia(strapi, model.attributes, data, (name) => fileIds.get(name)),
-          status: 'published',
-        });
-        seeded.add(type);
-        result.created.push(type);
+        const documentData = mapMedia(strapi, model.attributes, data, (name) => fileIds.get(name));
+        if (inBlogCategory) {
+          // Only a category of the professionals site: the article guard rejects any other.
+          const category = await strapi.db.query(CATEGORY_UID).findOne({
+            where: { slug: readJson('blog-category.json').slug, site: data.site },
+            select: ['documentId'],
+          });
+          if (category) {
+            documentData.category = category.documentId;
+          }
+        }
+
+        await strapi.documents(uid).create({ data: documentData, status });
+        seeded.add(key);
+        result.created.push(key);
       }
       current = null;
 
@@ -259,9 +298,9 @@ function seedPros(strapi) {
 function parseArgs(args) {
   const reseed = [];
   for (let i = 0; i < args.length; i++) {
-    if (args[i] !== '--reseed' || !SINGLE_TYPES.includes(args[i + 1])) {
+    if (args[i] !== '--reseed' || !SEED_KEYS.includes(args[i + 1])) {
       throw new Error(
-        `Usage: npm run seed:pros [-- --reseed <type> ...], a type being one of ${SINGLE_TYPES.join(', ')}`
+        `Usage: npm run seed:pros [-- --reseed <item> ...], an item being one of ${SEED_KEYS.join(', ')}`
       );
     }
     reseed.push(args[i + 1]);
