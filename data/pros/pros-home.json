@@ -1,13 +1,13 @@
 {
   "seo": {
-    "title": "Free Client Food Diary for Dietitians and Trainers | Caltrac",
+    "title": "Free Client Food Diary for Dietitians and Trainers | Caltrac AI",
     "description": "Free for dietitians, nutritionists and trainers: see the meals your clients choose to share, from photo or text logs, and comment on them.",
     "h1": "Review your clients' meals, from their own photo or text logs",
     "indexable": true,
     "updated": "2026-11-17"
   },
   "hero": {
-    "intro": "Caltrac for Professionals is a free way for dietitians, nutritionists and trainers to see the meals their clients choose to share, and comment on them. Clients log with a photo or a short description, and stay in control of what you see.",
+    "intro": "Caltrac AI for Professionals is a free way for dietitians, nutritionists and trainers to see the meals their clients choose to share, and comment on them. Clients log with a photo or a short description, and stay in control of what you see.",
     "apply": {
       "label": "Apply to join",
       "campaign": "home-hero"
@@ -23,7 +23,7 @@
   },
   "heroImage": {
     "image": "pros-caltrac-hero-subject.png",
-    "alt": "The Caltrac mascot holding a phone and a bowl of salad, in front of the Caltrac app's calorie and macro screen"
+    "alt": "The Caltrac AI mascot holding a phone and a bowl of salad, in front of the Caltrac AI app's calorie and macro screen"
   },
   "canDo": {
     "heading": "What you can do",
@@ -34,7 +34,7 @@
       },
       {
         "title": "Comment on the meal itself.",
-        "text": "Your client reads your comment in the Caltrac app, next to the food."
+        "text": "Your client reads your comment in the Caltrac AI app, next to the food."
       },
       {
         "title": "Give clients your linking code.",
@@ -78,9 +78,9 @@
   "loggingHeading": "How a meal gets logged",
   "loggingScreenshot": {
     "image": "pros-meal-logged.jpg",
-    "alt": "A meal logged from a photo in the Caltrac app, showing the foods found before saving"
+    "alt": "A meal logged from a photo in the Caltrac AI app, showing the foods found before saving"
   },
-  "loggingText": "Your client logs a meal with a photo or a short description. Caltrac estimates the calories and macros (protein, carbs and fat), and the client can edit the foods and serving sizes before saving. These are estimates, not exact measurements, so use them as a starting point for conversation.",
+  "loggingText": "Your client logs a meal with a photo or a short description. Caltrac AI estimates the calories and macros (protein, carbs and fat), and the client can edit the foods and serving sizes before saving. These are estimates, not exact measurements, so use them as a starting point for conversation.",
   "stepsLink": {
     "label": "Read the full steps",
     "href": "/how-it-works"
@@ -90,15 +90,15 @@
     "items": [
       {
         "question": "Does it cost anything?",
-        "answer": "Joining and using Caltrac for Professionals is free."
+        "answer": "Joining and using Caltrac AI for Professionals is free."
       },
       {
         "question": "How long does review take?",
-        "answer": "A person at Caltrac reads every application. The review is manual, and you receive the outcome by email within 24–48 hours."
+        "answer": "A person at Caltrac AI reads every application. The review is manual, and you receive the outcome by email within 24–48 hours."
       },
       {
         "question": "Can a client stop sharing?",
-        "answer": "Yes, at any time. They don't need approval from you or from Caltrac, and it takes effect immediately."
+        "answer": "Yes, at any time. They don't need approval from you or from Caltrac AI, and it takes effect immediately."
       }
     ]
   },

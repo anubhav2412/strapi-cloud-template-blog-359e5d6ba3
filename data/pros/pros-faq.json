@@ -1,8 +1,8 @@
 {
   "seo": {
-    "title": "Caltrac for Professionals FAQ: Cost, Review, Client Consent",
-    "description": "Answers on cost, review time, client consent and what dietitians, nutritionists and trainers can see in Caltrac for Professionals.",
-    "h1": "Questions about Caltrac for Professionals",
+    "title": "Caltrac AI for Professionals FAQ: Cost, Review, Client Consent",
+    "description": "Answers on cost, review time, client consent and what dietitians, nutritionists and trainers can see in Caltrac AI for Professionals.",
+    "h1": "Questions about Caltrac AI for Professionals",
     "indexable": true,
     "updated": "2026-11-17",
     "breadcrumb": "FAQ"
@@ -17,28 +17,28 @@
         },
         {
           "question": "Does it cost anything?",
-          "answer": "Joining and using Caltrac for Professionals is free."
+          "answer": "Joining and using Caltrac AI for Professionals is free."
         },
         {
           "question": "How long does review take?",
-          "answer": "A person at Caltrac reads every application. The review is manual, and you receive the outcome by email within 24–48 hours."
+          "answer": "A person at Caltrac AI reads every application. The review is manual, and you receive the outcome by email within 24–48 hours."
         },
         {
           "question": "What happens after I'm approved?",
           "answer": "We create your professional account, email you the details and give you your linking code. Nothing is created before approval."
         },
         {
-          "question": "Who runs Caltrac?",
-          "answer": "Caltrac is run by CALTRACAI CORP. You can reach us at [support@caltrac.ai](mailto:support@caltrac.ai)."
+          "question": "Who runs Caltrac AI?",
+          "answer": "Caltrac AI is run by CALTRACAI CORP. You can reach us at [support@caltrac.ai](mailto:support@caltrac.ai)."
         }
       ]
     },
     {
-      "heading": "Using Caltrac",
+      "heading": "Using Caltrac AI",
       "items": [
         {
           "question": "What is Caltrac Connect?",
-          "answer": "Caltrac Connect is an optional feature in the Caltrac app, opened from the button in the app's top bar. A client can connect with a nutritionist, dietitian or trainer, who can then view their meals and leave comments. The client controls access and can revoke it at any time."
+          "answer": "Caltrac Connect is an optional feature in the Caltrac AI app, opened from the button in the app's top bar. A client can connect with a nutritionist, dietitian or trainer, who can then view their meals and leave comments. The client controls access and can revoke it at any time."
         },
         {
           "question": "What can I see about my clients?",
@@ -46,7 +46,7 @@
         },
         {
           "question": "Can I comment on meals?",
-          "answer": "Yes. Your comment appears in the Caltrac app next to the meal it refers to."
+          "answer": "Yes. Your comment appears in the Caltrac AI app next to the meal it refers to."
         },
         {
           "question": "How do my clients connect with me?",
@@ -58,15 +58,15 @@
         },
         {
           "question": "How do clients log meals?",
-          "answer": "With a photo or a short description. Caltrac estimates calories and macros, and clients can edit the foods and serving sizes before saving. They are estimates, not exact measurements."
+          "answer": "With a photo or a short description. Caltrac AI estimates calories and macros, and clients can edit the foods and serving sizes before saving. They are estimates, not exact measurements."
         },
         {
           "question": "Which phones does it need?",
-          "answer": "Caltrac is available on the App Store and Google Play. On iPhone it needs iOS 17 or later, and on Android it needs Android 14 or later.",
+          "answer": "Caltrac AI is available on the App Store and Google Play. On iPhone it needs iOS 17 or later, and on Android it needs Android 14 or later.",
           "storeBadges": true
         },
         {
-          "question": "What does Caltrac for Professionals focus on?",
+          "question": "What does Caltrac AI for Professionals focus on?",
           "answer": "{{focus}}"
         }
       ]
@@ -80,18 +80,18 @@
         },
         {
           "question": "Can a client stop sharing?",
-          "answer": "Yes, at any time. They don't need approval from you or from Caltrac, and it takes effect immediately."
+          "answer": "Yes, at any time. They don't need approval from you or from Caltrac AI, and it takes effect immediately."
         },
         {
           "question": "What does access cover?",
           "answer": "{{accessWording}} You can comment on meals."
         },
         {
-          "question": "What data does Caltrac collect, and who can see it?",
-          "answer": "Caltrac's [Privacy Policy](/privacy) explains what we collect and who can see it."
+          "question": "What data does Caltrac AI collect, and who can see it?",
+          "answer": "Caltrac AI's [Privacy Policy](/privacy) explains what we collect and who can see it."
         },
         {
-          "question": "Is Caltrac HIPAA compliant?",
+          "question": "Is Caltrac AI HIPAA compliant?",
           "answer": "No. {{hipaaClause}} See our [Terms & Conditions](/terms#not-medical-advice)."
         }
       ]
@@ -101,7 +101,7 @@
       "items": [
         {
           "question": "I want to track my own meals. Where do I go?",
-          "answer": "Use the Caltrac mobile app. This site is for professionals.",
+          "answer": "Use the Caltrac AI mobile app. This site is for professionals.",
           "storeBadges": true
         }
       ]

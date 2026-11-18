@@ -1,12 +1,12 @@
 {
   "seo": {
-    "title": "Sign in | Caltrac for Professionals",
-    "description": "Sign in to Caltrac for Professionals, or apply to join as a dietitian, nutritionist or trainer.",
+    "title": "Sign in | Caltrac AI for Professionals",
+    "description": "Sign in to Caltrac AI for Professionals, or apply to join as a dietitian, nutritionist or trainer.",
     "h1": "Affiliate sign in",
-    "ogTitle": "Sign in to Caltrac for Professionals",
+    "ogTitle": "Sign in to Caltrac AI for Professionals",
     "indexable": false
   },
-  "newcomersHeading": "New to Caltrac for Professionals?",
+  "newcomersHeading": "New to Caltrac AI for Professionals?",
   "newcomersText": "Dietitians, nutritionists and trainers can review the meals their clients choose to share, and comment on them. It's free to apply.",
   "apply": {
     "label": "Apply to join",
@@ -16,5 +16,5 @@
     "label": "How it works",
     "href": "/how-it-works"
   },
-  "appLine": "Tracking your own meals? Use the Caltrac mobile app."
+  "appLine": "Tracking your own meals? Use the Caltrac AI mobile app."
 }

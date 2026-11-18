@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "Free Client Food Tracking for Nutritionists | Caltrac",
+    "title": "Free Client Food Tracking for Nutritionists | Caltrac AI",
     "description": "Start client reviews from the food: shared meals with calories and macros already estimated, and comments in the client's app. Free to join.",
     "h1": "Start every review from the food, not from data entry",
     "indexable": true,
@@ -8,7 +8,7 @@
     "breadcrumb": "For nutritionists"
   },
   "hero": {
-    "intro": "Caltrac for Professionals lets nutritionists see the meals clients choose to share, with calories and macros already estimated for each one. Your review starts from what's on the plate.",
+    "intro": "Caltrac AI for Professionals lets nutritionists see the meals clients choose to share, with calories and macros already estimated for each one. Your review starts from what's on the plate.",
     "apply": {
       "label": "Apply to join",
       "campaign": "nutritionists-hero"
@@ -57,11 +57,11 @@
       },
       {
         "question": "How are calories worked out?",
-        "answer": "Clients log with a photo or a short description, Caltrac estimates, and clients can edit the estimate."
+        "answer": "Clients log with a photo or a short description, Caltrac AI estimates, and clients can edit the estimate."
       },
       {
         "question": "Is it free?",
-        "answer": "Caltrac for Professionals is free to join."
+        "answer": "Caltrac AI for Professionals is free to join."
       },
       {
         "question": "How do I bring up a client's eating habits?",

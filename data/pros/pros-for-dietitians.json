@@ -1,6 +1,6 @@
 {
   "seo": {
-    "title": "Free Photo Food Diary for Dietitians | Caltrac",
+    "title": "Free Photo Food Diary for Dietitians | Caltrac AI",
     "description": "Review the meals your clients choose to share, as photos with estimated calories and macros, between appointments. Free for dietitians.",
     "h1": "Follow what your clients actually ate, between appointments",
     "indexable": true,
@@ -8,7 +8,7 @@
     "breadcrumb": "For dietitians"
   },
   "hero": {
-    "intro": "Caltrac for Professionals gives dietitians a view of the meals clients choose to share, with estimated calories and macros. You can start from the meals as they were logged, not from a diary rebuilt from memory the night before.",
+    "intro": "Caltrac AI for Professionals gives dietitians a view of the meals clients choose to share, with estimated calories and macros. You can start from the meals as they were logged, not from a diary rebuilt from memory the night before.",
     "apply": {
       "label": "Apply to join",
       "campaign": "dietitians-hero"
@@ -41,15 +41,15 @@
   },
   "estimates": {
     "heading": "Estimates you can question",
-    "body": "Clients log a meal with a photo or a short description. Caltrac estimates calories and macros, and clients can edit the foods and serving sizes before saving. Treat the numbers as a starting point, apply your own judgment, and decide how much weight to give them with each client."
+    "body": "Clients log a meal with a photo or a short description. Caltrac AI estimates calories and macros, and clients can edit the foods and serving sizes before saving. Treat the numbers as a starting point, apply your own judgment, and decide how much weight to give them with each client."
   },
   "estimatesScreenshot": {
     "image": "pros-meal-logged.jpg",
-    "alt": "A meal logged from a photo in the Caltrac app, showing the foods found before saving"
+    "alt": "A meal logged from a photo in the Caltrac AI app, showing the foods found before saving"
   },
   "privacy": {
     "heading": "Privacy and clinical use",
-    "body": "Caltrac doesn't diagnose or treat anything and doesn't give medical advice. It doesn't replace your clinical judgment. {{hipaaClause}} See our [Terms & Conditions](/terms#not-medical-advice) and [Privacy Policy](/privacy)."
+    "body": "Caltrac AI doesn't diagnose or treat anything and doesn't give medical advice. It doesn't replace your clinical judgment. {{hipaaClause}} See our [Terms & Conditions](/terms#not-medical-advice) and [Privacy Policy](/privacy)."
   },
   "faq": {
     "heading": "Questions from dietitians",
@@ -64,10 +64,10 @@
       },
       {
         "question": "What happens if a client stops sharing?",
-        "answer": "Your access ends immediately. The client doesn't need approval from you or from Caltrac."
+        "answer": "Your access ends immediately. The client doesn't need approval from you or from Caltrac AI."
       },
       {
-        "question": "Is Caltrac HIPAA compliant?",
+        "question": "Is Caltrac AI HIPAA compliant?",
         "answer": "No. {{hipaaClause}} See our [Terms & Conditions](/terms#not-medical-advice).",
         "structuredData": false
       }
