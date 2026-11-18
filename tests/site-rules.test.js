@@ -2,7 +2,7 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
-const { siteProblems } = require('../src/pros-blog/site-rules');
+const { siteProblems, publishProblems } = require('../src/pros-blog/site-rules');
 
 const caltracCategory = { name: 'Nutrition', site: 'caltrac' };
 const prosCategory = { name: 'Professionals', site: 'professionals' };
@@ -73,4 +73,21 @@ test('both rules are reported together', () => {
 test('a category without a name is still named in the message', () => {
   const problems = siteProblems({ site: 'professionals', blocks: [], category: { name: null, site: 'caltrac' } });
   assert.match(problems[0].message, /^The article's category is on the "caltrac" site/);
+});
+
+test('a professionals article without a published date may not be published', () => {
+  for (const publishedDate of [null, undefined, '']) {
+    const problems = publishProblems({ site: 'professionals', publishedDate });
+    assert.deepEqual(paths(problems), ['publishedDate'], String(publishedDate));
+    assert.match(problems[0].message, /^Set "Published date" before publishing a professionals article\./);
+  }
+});
+
+test('a professionals article with a published date may be published', () => {
+  assert.deepEqual(publishProblems({ site: 'professionals', publishedDate: '2026-11-17' }), []);
+});
+
+test('a caltrac article, or one without a site, needs no published date', () => {
+  assert.deepEqual(publishProblems({ site: 'caltrac', publishedDate: null }), []);
+  assert.deepEqual(publishProblems({ site: null, publishedDate: null }), []);
 });

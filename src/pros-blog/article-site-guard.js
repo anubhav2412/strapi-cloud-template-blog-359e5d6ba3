@@ -1,7 +1,7 @@
 'use strict';
 
 const { errors } = require('@strapi/utils');
-const { siteProblems } = require('./site-rules');
+const { siteProblems, publishProblems } = require('./site-rules');
 
 const ARTICLE_UID = 'api::article.article';
 
@@ -18,9 +18,20 @@ const documentIdOf = ({ action, params }, result) =>
   action === 'create' || action === 'clone' ? result?.documentId : params.documentId;
 
 /**
+ * Whether the action publishes: `publish`, or `create` and `update` with
+ * status 'published' (they publish the draft they wrote). The admin's Publish
+ * button saves with `update` and then calls `publish`, and its bulk publish
+ * calls `publish` for each document. `clone` makes a draft, and
+ * `discardDraft` copies the published version, which was checked when it was
+ * published.
+ */
+const publishes = ({ action, params }) =>
+  action === 'publish' || ((action === 'create' || action === 'update') && params.status === 'published');
+
+/**
  * A document service middleware that rejects an article whose site, blocks
- * and category break the rules in ./site-rules, from the admin, the REST API
- * and server code alike.
+ * and category break the rules in ./site-rules, and a publish that breaks its
+ * publish rules, from the admin, the REST API and server code alike.
  *
  * It runs the action inside a transaction, then reads the article's draft as
  * the action left it and checks that. Reading the stored result means an
@@ -36,11 +47,11 @@ const documentIdOf = ({ action, params }, result) =>
  * error inside it does.
  */
 function createArticleSiteGuard(strapi) {
-  const checkDrafts = async (documentId) => {
+  const checkDrafts = async (documentId, publishing) => {
     if (!documentId) return;
     const drafts = await strapi.db.query(ARTICLE_UID).findMany({
       where: { documentId, publishedAt: null },
-      select: ['id', 'site'],
+      select: ['id', 'site', 'publishedDate'],
       populate: { category: { select: ['name', 'site'] }, blocks: true },
     });
     for (const draft of drafts) {
@@ -49,6 +60,9 @@ function createArticleSiteGuard(strapi) {
         blocks: (draft.blocks ?? []).map((block) => block.__component),
         category: draft.category,
       });
+      if (publishing) {
+        problems.push(...publishProblems(draft));
+      }
       if (problems.length > 0) {
         throw new errors.ValidationError(problems.map((problem) => problem.message).join(' '), {
           errors: problems.map(({ path, message }) => ({ path, message, name: 'ValidationError' })),
@@ -63,7 +77,7 @@ function createArticleSiteGuard(strapi) {
     }
     return strapi.db.transaction(async () => {
       const result = await next();
-      await checkDrafts(documentIdOf(context, result));
+      await checkDrafts(documentIdOf(context, result), publishes(context));
       return result;
     });
   };

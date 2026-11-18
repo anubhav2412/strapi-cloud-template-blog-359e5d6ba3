@@ -1,12 +1,14 @@
 'use strict';
 
 /**
- * The rules that keep an article and its category on one site.
+ * The rules for an article's site, and for publishing a professionals article.
  *
  * - caltrac.ai renders only the shared.* blocks, so an article whose site is
  *   caltrac may not hold a blog.* block.
  * - An article's category must be on the article's site, so the category pages
  *   of one site never list the other site's articles.
+ * - A professionals article is published only with its Published date, the
+ *   date the blog shows; Strapi's own publish time changes on every publish.
  *
  * A missing site counts as caltrac, the field's default and what the site had
  * before the field existed.
@@ -57,4 +59,26 @@ function siteProblems({ site, blocks, category }) {
   return problems;
 }
 
-module.exports = { siteProblems };
+/**
+ * The rules that apply only when an article is published.
+ *
+ * @param {object} article
+ * @param {string | null | undefined} article.site
+ * @param {string | null | undefined} article.publishedDate
+ * @returns {{ path: string[], message: string }[]} one item per broken rule; empty when the article may be published
+ */
+function publishProblems({ site, publishedDate }) {
+  if (siteOf(site) === SITES.professionals && !publishedDate) {
+    return [
+      {
+        path: ['publishedDate'],
+        message:
+          'Set "Published date" before publishing a professionals article. ' +
+          "Use the date it first goes live, and don't change it afterwards.",
+      },
+    ];
+  }
+  return [];
+}
+
+module.exports = { siteProblems, publishProblems };
