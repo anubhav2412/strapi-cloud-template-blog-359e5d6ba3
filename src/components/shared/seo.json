@@ -10,7 +10,7 @@
   "attributes": {
     "metaTitle": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "metaDescription": {
       "type": "text",

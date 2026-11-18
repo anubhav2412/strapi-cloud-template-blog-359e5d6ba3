@@ -515,6 +515,7 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    publishedDate: Schema.Attribute.Date;
     relatedArticles: Schema.Attribute.Relation<
       'manyToMany',
       'api::article.article'

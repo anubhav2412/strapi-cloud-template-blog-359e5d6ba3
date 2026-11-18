@@ -80,6 +80,9 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::article.article"
+    },
+    "publishedDate": {
+      "type": "date"
     }
   }
 }

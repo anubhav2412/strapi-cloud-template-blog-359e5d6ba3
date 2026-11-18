@@ -114,6 +114,7 @@ The blog at affiliate.caltrac.ai/blog is written here, in **Content Manager → 
 - Saving or publishing an article that breaks a rule is refused, with one of these messages:
   - `Site is "caltrac", and caltrac.ai can't show the blog blocks (blog.callout, …). For the professionals blog, set Site to "professionals". For caltrac.ai, remove those blocks.`
   - `The category "…" is on the "caltrac" site, and this article's Site is "professionals". Pick a category of the "professionals" site, or change Site.`
+  - On publishing a professionals article: `Set "Published date" before publishing a professionals article. Use the date it first goes live, and don't change it afterwards.`
 
   The check runs in `src/pros-blog/` on create, update, publish, duplicate and discard-changes, from the admin, the REST API and server code alike. It reads the article as it would be saved, so an edit that leaves out the site, the blocks or the category is checked against what is stored.
 
@@ -125,6 +126,10 @@ The blog at affiliate.caltrac.ai/blog is written here, in **Content Manager → 
 4. Fill in **Seo** (below).
 5. **Save** keeps a draft. A draft is never on the site. Have it checked, then **Publish**. Publishing calls the site's webhook, which updates the site.
 6. To take an article down, **Unpublish** it. Never delete: unpublishing keeps the draft, so nothing is lost, the same as the pros types.
+
+**Published date** is the article's own publication date, and a professionals article can't be published without it. Set it when you publish the article for the first time, to that day, and never change it after. Strapi's publish time changes every time the article is published again, so it can't serve as that date. A draft can be saved without it.
+
+Before the first professionals article is published, rewrite the SEO **description** of **Pros — Blog landing** (`pros-blog-landing`). It still holds the "coming soon" line, and once the blog has an article it becomes the hub's intro, its meta description and the RSS feed's description.
 
 The draft **Sample article — do not publish** (`sample-article-do-not-publish`) uses every block with sample text and images, and its Seo has Noindex on. Use it as a reference, and never publish it.
 
@@ -155,7 +160,7 @@ The blog uses the `blog.*` blocks. caltrac.ai can't show them, so they are refus
 
 #### Seo
 
-- **Meta title:** up to 60 characters. **Meta description:** up to 160.
+- **Meta title:** optional, up to 60 characters. Empty, the article's title is used. **Meta description:** required once the Seo component is added, up to 160.
 - **Share image:** the picture shown when the article is shared. Empty, the cover is used.
 - **Canonical URL:** only for an article first published elsewhere; it holds that page's address. Empty for everything written for the blog.
 - **Noindex:** on keeps the article out of search engines. Off by default.
