@@ -646,7 +646,7 @@ export interface ApiProsBlogLandingProsBlogLanding
   extends Struct.SingleTypeSchema {
   collectionName: 'pros_blog_landings';
   info: {
-    description: 'Caltrac for Professionals: the blog page before the blog launches';
+    description: 'Caltrac AI for Professionals: the blog page before the blog launches';
     displayName: 'Pros \u2014 Blog landing';
     pluralName: 'pros-blog-landings';
     singularName: 'pros-blog-landing';
@@ -681,7 +681,7 @@ export interface ApiProsBlogLandingProsBlogLanding
 export interface ApiProsFaqProsFaq extends Struct.SingleTypeSchema {
   collectionName: 'pros_faqs';
   info: {
-    description: 'Caltrac for Professionals: the FAQ page';
+    description: 'Caltrac AI for Professionals: the FAQ page';
     displayName: 'Pros \u2014 FAQ';
     pluralName: 'pros-faqs';
     singularName: 'pros-faq';
@@ -732,7 +732,7 @@ export interface ApiProsForDietitiansProsForDietitians
   extends Struct.SingleTypeSchema {
   collectionName: 'pros_for_dietitians_pages';
   info: {
-    description: 'Caltrac for Professionals: the page for dietitians';
+    description: 'Caltrac AI for Professionals: the page for dietitians';
     displayName: 'Pros \u2014 For dietitians';
     pluralName: 'pros-for-dietitians-pages';
     singularName: 'pros-for-dietitians';
@@ -795,7 +795,7 @@ export interface ApiProsForNutritionistsProsForNutritionists
   extends Struct.SingleTypeSchema {
   collectionName: 'pros_for_nutritionists_pages';
   info: {
-    description: 'Caltrac for Professionals: the page for nutritionists';
+    description: 'Caltrac AI for Professionals: the page for nutritionists';
     displayName: 'Pros \u2014 For nutritionists';
     pluralName: 'pros-for-nutritionists-pages';
     singularName: 'pros-for-nutritionists';
@@ -852,7 +852,7 @@ export interface ApiProsForPersonalTrainersProsForPersonalTrainers
   extends Struct.SingleTypeSchema {
   collectionName: 'pros_for_personal_trainers_pages';
   info: {
-    description: 'Caltrac for Professionals: the page for personal trainers';
+    description: 'Caltrac AI for Professionals: the page for personal trainers';
     displayName: 'Pros \u2014 For personal trainers';
     pluralName: 'pros-for-personal-trainers-pages';
     singularName: 'pros-for-personal-trainers';
@@ -910,7 +910,7 @@ export interface ApiProsForPersonalTrainersProsForPersonalTrainers
 export interface ApiProsHomeProsHome extends Struct.SingleTypeSchema {
   collectionName: 'pros_homes';
   info: {
-    description: 'Caltrac for Professionals: the home page';
+    description: 'Caltrac AI for Professionals: the home page';
     displayName: 'Pros \u2014 Home';
     pluralName: 'pros-homes';
     singularName: 'pros-home';
@@ -979,7 +979,7 @@ export interface ApiProsHowItWorksProsHowItWorks
   extends Struct.SingleTypeSchema {
   collectionName: 'pros_how_it_works_pages';
   info: {
-    description: 'Caltrac for Professionals: the How it works page';
+    description: 'Caltrac AI for Professionals: the How it works page';
     displayName: 'Pros \u2014 How it works';
     pluralName: 'pros-how-it-works-pages';
     singularName: 'pros-how-it-works';
@@ -1038,7 +1038,7 @@ export interface ApiProsHowYourClientsConnectProsHowYourClientsConnect
   extends Struct.SingleTypeSchema {
   collectionName: 'pros_how_your_clients_connects';
   info: {
-    description: 'Caltrac for Professionals: the page professionals send to their clients';
+    description: 'Caltrac AI for Professionals: the page professionals send to their clients';
     displayName: 'Pros \u2014 How your clients connect';
     pluralName: 'pros-how-your-clients-connects';
     singularName: 'pros-how-your-clients-connect';
@@ -1085,7 +1085,7 @@ export interface ApiProsHowYourClientsConnectProsHowYourClientsConnect
 export interface ApiProsLoginProsLogin extends Struct.SingleTypeSchema {
   collectionName: 'pros_logins';
   info: {
-    description: 'Caltrac for Professionals: the copy around the sign-in card';
+    description: 'Caltrac AI for Professionals: the copy around the sign-in card';
     displayName: 'Pros \u2014 Login';
     pluralName: 'pros-logins';
     singularName: 'pros-login';
@@ -1122,7 +1122,7 @@ export interface ApiProsLoginProsLogin extends Struct.SingleTypeSchema {
 export interface ApiProsSiteProsSite extends Struct.SingleTypeSchema {
   collectionName: 'pros_sites';
   info: {
-    description: 'Caltrac for Professionals: copy shared by every page, the header and footer, the store badges and the shared sections';
+    description: 'Caltrac AI for Professionals: copy shared by every page, the header and footer, the store badges and the shared sections';
     displayName: 'Pros \u2014 Site';
     pluralName: 'pros-sites';
     singularName: 'pros-site';

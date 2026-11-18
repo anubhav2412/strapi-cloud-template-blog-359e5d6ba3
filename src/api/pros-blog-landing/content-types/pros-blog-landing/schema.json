@@ -5,7 +5,7 @@
     "singularName": "pros-blog-landing",
     "pluralName": "pros-blog-landings",
     "displayName": "Pros — Blog landing",
-    "description": "Caltrac for Professionals: the blog page before the blog launches"
+    "description": "Caltrac AI for Professionals: the blog page before the blog launches"
   },
   "options": {
     "draftAndPublish": true

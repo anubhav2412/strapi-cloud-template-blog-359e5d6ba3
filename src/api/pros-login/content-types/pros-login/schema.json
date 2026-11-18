@@ -5,7 +5,7 @@
     "singularName": "pros-login",
     "pluralName": "pros-logins",
     "displayName": "Pros — Login",
-    "description": "Caltrac for Professionals: the copy around the sign-in card"
+    "description": "Caltrac AI for Professionals: the copy around the sign-in card"
   },
   "options": {
     "draftAndPublish": true
