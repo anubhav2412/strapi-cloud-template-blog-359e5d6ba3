@@ -40,9 +40,9 @@ Strapi gives you many possible deployment options for your project including [St
 yarn strapi deploy
 ```
 
-## Caltrac for Professionals content
+## Caltrac AI for Professionals content
 
-The copy and images of the Caltrac for Professionals site (affiliate.caltrac.ai) live in this Strapi, next to caltrac.ai's `/nutrition` articles. They have their own single types and components. The site's blog, the professionals blog, shares caltrac.ai's `article`, `category` and `author` types: each article and category has a `site`, and the blog's blocks are the `blog.*` components (see [The professionals blog](#the-professionals-blog)). The web's other types (`global`, `about`) are neither used nor changed by the site.
+The copy and images of the Caltrac AI for Professionals site (affiliate.caltrac.ai) live in this Strapi, next to caltrac.ai's `/nutrition` articles. They have their own single types and components. The site's blog, the professionals blog, shares caltrac.ai's `article`, `category` and `author` types: each article and category has a `site`, and the blog's blocks are the `blog.*` components (see [The professionals blog](#the-professionals-blog)). The web's other types (`global`, `about`) are neither used nor changed by the site.
 
 ### Content model
 
@@ -91,7 +91,7 @@ Three sentences are stored once and used in several places. A text that uses one
 | --- | --- | --- |
 | `{{accessWording}}` | `pros-site.accessWording` | the "What you see" key fact, the client control section, two FAQ answers ("What can I see about my clients?", "What does access cover?") and Home's first "What you can do" item |
 | `{{hipaaClause}}` | `pros-site.hipaaClause` | the FAQ's and the dietitians' "Is Caltrac HIPAA compliant?" answers and the dietitians' privacy section |
-| `{{focus}}` | `pros-site.focus.body` | the FAQ answer to "What does Caltrac for Professionals focus on?" |
+| `{{focus}}` | `pros-site.focus.body` | the FAQ answer to "What does Caltrac AI for Professionals focus on?" |
 
 #### What stays in the site's code
 
@@ -245,7 +245,7 @@ The site reads the pros types with a read-only token. It is created in the admin
 
 Settings → Webhooks → Create new webhook, a second one next to caltrac.ai's:
 
-- Name: `Caltrac for Professionals`
+- Name: `Caltrac AI for Professionals`. The owner renames the existing webhook to this name in Strapi Cloud (Settings → Webhooks) at the same sitting as the editors' content edits.
 - URL: `https://affiliate.caltrac.ai/api/revalidate`
 - Header: `x-revalidate-secret`, set to the site's revalidation secret
 - Events: Entry create, update, delete, publish and unpublish; Media update

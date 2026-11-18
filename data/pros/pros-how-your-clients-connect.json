@@ -1,22 +1,22 @@
 {
   "seo": {
-    "title": "Share Your Food Log With Your Dietitian | Caltrac",
-    "description": "Install Caltrac on iPhone or Android, enter your professional's code and send a request to share your meals. Stop sharing any time.",
+    "title": "Share Your Food Log With Your Dietitian | Caltrac AI",
+    "description": "Install Caltrac AI on iPhone or Android, enter your professional's code and send a request to share your meals. Stop sharing any time.",
     "h1": "How to share your meals with your dietitian, nutritionist or trainer",
     "indexable": true,
     "updated": "2026-11-17",
     "breadcrumb": "How your clients connect"
   },
   "intro": {
-    "body": "To share your meals, install Caltrac, enter the linking code your professional gave you in Caltrac Connect, and send a request. Once your professional accepts it, they can see the meals you log and comment on them. You can stop sharing at any time."
+    "body": "To share your meals, install Caltrac AI, enter the linking code your professional gave you in Caltrac Connect, and send a request. Once your professional accepts it, they can see the meals you log and comment on them. You can stop sharing at any time."
   },
   "connect": {
     "heading": "What is Caltrac Connect?",
-    "body": "Caltrac Connect is an optional feature in the Caltrac app, opened from the button in the app's top bar. It lets you connect with a nutritionist, dietitian or trainer, who can then view your meals and leave comments. You control access and can revoke it at any time."
+    "body": "Caltrac Connect is an optional feature in the Caltrac AI app, opened from the button in the app's top bar. It lets you connect with a nutritionist, dietitian or trainer, who can then view your meals and leave comments. You control access and can revoke it at any time."
   },
   "before": {
     "heading": "Before you start",
-    "body": "You need the Caltrac app and your professional's linking code. Professionals receive their code after Caltrac approves their account."
+    "body": "You need the Caltrac AI app and your professional's linking code. Professionals receive their code after Caltrac AI approves their account."
   },
   "canSee": {
     "heading": "What your professional can see",
@@ -34,7 +34,7 @@
     "heading": "Four steps",
     "steps": [
       {
-        "text": "Install Caltrac on iPhone or Android.",
+        "text": "Install Caltrac AI on iPhone or Android.",
         "storeBadges": true
       },
       {
@@ -53,13 +53,13 @@
     "items": [
       {
         "question": "My professional doesn't have a code yet.",
-        "answer": "They can apply to join at the [Caltrac for Professionals Home page](/). Once approved, they'll receive a code."
+        "answer": "They can apply to join at the [Caltrac AI for Professionals Home page](/). Once approved, they'll receive a code."
       },
       {
-        "question": "Is Caltrac free?",
-        "answer": "Caltrac is free to use, with no subscriptions."
+        "question": "Is Caltrac AI free?",
+        "answer": "Caltrac AI is free to use, with no subscriptions."
       }
     ]
   },
-  "installHeading": "Install Caltrac"
+  "installHeading": "Install Caltrac AI"
 }

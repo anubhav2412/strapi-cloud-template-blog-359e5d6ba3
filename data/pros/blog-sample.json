@@ -27,15 +27,15 @@
     {
       "__component": "blog.image",
       "image": "pros-meal-logged.jpg",
-      "alt": "A meal logged from a photo in the Caltrac app, showing the foods found before saving",
+      "alt": "A meal logged from a photo in the Caltrac AI app, showing the foods found before saving",
       "caption": "An image block, inline: the width of the text.",
-      "credit": "Caltrac",
+      "credit": "Caltrac AI",
       "layout": "inline"
     },
     {
       "__component": "blog.image-text",
       "image": "pros-proof-meals.png",
-      "alt": "A professional's view of a client's meals in Caltrac for Professionals",
+      "alt": "A professional's view of a client's meals in Caltrac AI for Professionals",
       "side": "right",
       "body": "An image and text block puts a picture beside a short text. Here the image is on the right.\n\nThe text is Markdown, like a rich text block."
     },
@@ -51,7 +51,7 @@
       "items": [
         {
           "image": "pros-proof-meals.png",
-          "alt": "A professional's view of a client's meals in Caltrac for Professionals",
+          "alt": "A professional's view of a client's meals in Caltrac AI for Professionals",
           "caption": "A client's meals"
         },
         {

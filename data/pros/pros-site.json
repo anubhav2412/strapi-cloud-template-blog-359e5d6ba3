@@ -1,5 +1,5 @@
 {
-  "siteName": "Caltrac for Professionals",
+  "siteName": "Caltrac AI for Professionals",
   "companyName": "CALTRACAI CORP",
   "supportEmail": "support@caltrac.ai",
   "legalEmail": "legal@caltrac.ai",
@@ -7,7 +7,7 @@
   "applyPageUrl": "https://caltrac.ai/for-professionals",
   "applyUtmSource": "pros-site",
   "applyUtmMedium": "cta",
-  "wordmark": "Caltrac",
+  "wordmark": "Caltrac AI",
   "qualifier": "for Professionals",
   "logo": {
     "image": "pros-logo-mark.png",
@@ -83,7 +83,7 @@
       "href": "mailto:legal@caltrac.ai"
     }
   ],
-  "footerAppHeading": "Get the Caltrac app",
+  "footerAppHeading": "Get the Caltrac AI app",
   "descriptor": "Caltrac AI ([caltrac.ai](https://caltrac.ai)), the AI calorie and macro tracker.",
   "storeBadges": [
     {
@@ -116,7 +116,7 @@
     },
     {
       "label": "Review",
-      "value": "A person at Caltrac reviews every application within 24–48 hours."
+      "value": "A person at Caltrac AI reviews every application within 24–48 hours."
     },
     {
       "label": "How clients log",
@@ -141,7 +141,7 @@
   ],
   "focus": {
     "heading": "What it focuses on",
-    "body": "Caltrac for Professionals focuses on one job: seeing the meals clients choose to share, and commenting on them."
+    "body": "Caltrac AI for Professionals focuses on one job: seeing the meals clients choose to share, and commenting on them."
   },
   "clientControl": {
     "heading": "Clients stay in control of their meals",
@@ -154,7 +154,7 @@
         "text": "Apply with your name and email."
       },
       {
-        "text": "A person at Caltrac reviews your application."
+        "text": "A person at Caltrac AI reviews your application."
       },
       {
         "text": "If approved, you get your account and linking code."
@@ -166,12 +166,12 @@
   },
   "scope": {
     "heading": "A note on scope",
-    "body": "Caltrac shows what clients choose to log. It doesn't give medical advice, and calorie and macro figures are estimates. Use your own professional judgment and work within your qualifications."
+    "body": "Caltrac AI shows what clients choose to log. It doesn't give medical advice, and calorie and macro figures are estimates. Use your own professional judgment and work within your qualifications."
   },
   "proofScreenshots": [
     {
       "image": "pros-proof-meals.png",
-      "alt": "A professional's view of a client's meals in Caltrac for Professionals"
+      "alt": "A professional's view of a client's meals in Caltrac AI for Professionals"
     },
     {
       "image": "pros-proof-comment.png",
@@ -182,11 +182,11 @@
       "alt": "A client entering a professional's linking code in Caltrac Connect"
     }
   ],
-  "proofCompanyHeading": "Who is behind Caltrac",
+  "proofCompanyHeading": "Who is behind Caltrac AI",
   "proofCompanyLabel": "Company",
   "proofContactLabel": "Contact",
   "closingHeading": "Ready to see your clients' meals?",
-  "closingText": "Apply to join. It's free, and a person at Caltrac reads every application.",
+  "closingText": "Apply to join. It's free, and a person at Caltrac AI reads every application.",
   "closingButton": "Apply to join",
   "hipaaClause": "Caltrac AI is not a “covered entity” or “business associate” under HIPAA, and the health information you provide is not protected health information subject to HIPAA.",
   "accessWording": "Access covers the meals your client logs, their nutrition goals and how their net calories compare with those goals."

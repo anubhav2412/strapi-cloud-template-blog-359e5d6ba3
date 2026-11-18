@@ -283,7 +283,7 @@ module.exports = async () => {
     strapi.log.error(`[pros-blog-backfill] did not complete; Strapi starts without it. ${error.stack ?? error}`);
   }
 
-  // The Caltrac for Professionals seed creates each pros type once, and never
+  // The Caltrac AI for Professionals seed creates each pros type once, and never
   // again after an editor changes or deletes it. A failure is logged and never
   // stops Strapi from starting, so the require sits inside the try as well.
   try {

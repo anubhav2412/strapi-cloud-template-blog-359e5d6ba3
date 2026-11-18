@@ -1,13 +1,13 @@
 {
   "seo": {
-    "title": "How Client-Controlled Food Log Sharing Works | Caltrac",
+    "title": "How Client-Controlled Food Log Sharing Works | Caltrac AI",
     "description": "Apply, get your linking code, and review meals your clients choose to share. Clients control access and can stop sharing at any time.",
-    "h1": "How Caltrac for Professionals works",
+    "h1": "How Caltrac AI for Professionals works",
     "indexable": true,
     "updated": "2026-11-17",
     "breadcrumb": "How it works"
   },
-  "intro": "Joining takes four steps. You apply, a person at Caltrac reviews your application, we set up your account and give you a linking code, and your clients enter that code in Caltrac Connect and send a request; access starts when you accept it. Clients can stop sharing at any time.",
+  "intro": "Joining takes four steps. You apply, a person at Caltrac AI reviews your application, we set up your account and give you a linking code, and your clients enter that code in Caltrac Connect and send a request; access starts when you accept it. Clients can stop sharing at any time.",
   "steps": {
     "steps": [
       {
@@ -16,7 +16,7 @@
       },
       {
         "heading": "Step 2. We review",
-        "text": "A person at Caltrac reads every application. The review is manual, and you get the outcome by email within 24–48 hours."
+        "text": "A person at Caltrac AI reads every application. The review is manual, and you get the outcome by email within 24–48 hours."
       },
       {
         "heading": "Step 3. We set up your account",
@@ -63,7 +63,7 @@
     "heading": "How clients connect",
     "steps": [
       {
-        "text": "Install Caltrac on iPhone or Android.",
+        "text": "Install Caltrac AI on iPhone or Android.",
         "storeBadges": true
       },
       {

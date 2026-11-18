@@ -5,7 +5,7 @@
     "singularName": "pros-site",
     "pluralName": "pros-sites",
     "displayName": "Pros — Site",
-    "description": "Caltrac for Professionals: copy shared by every page, the header and footer, the store badges and the shared sections"
+    "description": "Caltrac AI for Professionals: copy shared by every page, the header and footer, the store badges and the shared sections"
   },
   "options": {
     "draftAndPublish": true

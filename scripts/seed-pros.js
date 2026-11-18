@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Seeds the Caltrac for Professionals single types from data/pros, then the
+ * Seeds the Caltrac AI for Professionals single types from data/pros, then the
  * professionals blog's category and its sample article.
  *
  * Each pros single type is seeded once: it is created from
